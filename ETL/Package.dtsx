@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{B6CAFCB5-3599-40AB-B8C7-E75180AF3913}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{BEF96AC7-AFF8-4122-B8DB-540F76DBBE5C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -408,7 +408,7 @@
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="316.428572102165,63.4705881796597" />
+          TopLeft="291.428572048946,118.52941166081" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
