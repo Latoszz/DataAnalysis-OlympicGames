@@ -27,35 +27,34 @@ s24435
 - [Olympics-Dataset](https://github.com/KeithGalli/Olympics-Dataset)
 - [WorldBank](https://databank.worldbank.org/source/world-development-indicators)
 
+## {background-image="olympedia.png"}
+
+## {background-image="olympics-dataset.png"}
+
+## {background-image="worldbank.png"}
+
 
 # Pytania badawcze
 
-## General
-1. Does total population affect scores?
-2. Does income affect scores?
+## Zawodnicy
 
-## Gender
-3. According to gender equality indicators, do scores change?
+1. Jaki jest średni wiek zawodnika w zależności od dyscypliny sportu?
+2. Jak wygląda rozkład wieku zawodników w zależności od dyscypliny sportu?
+3. Jaki jest średni wzrost zawodnika w zależności od dyscypliny sportu?
+4. Jaka jest liczba medali w zależności od grup wiekowych?
+5. Jakie jest średnie miejsce zajmowane przez każdy kraj?
 
-## Government/safety
+## Kraje
 
-### Homicides;
-4. Public Sector/Conflict & Fragility
+6. Czy populacja jest skorelowana z wynikami?
+7. Czy PKB per capita jest skorelowany z wynikami?
+8. Czy stabilność polityczna i brak przemocy/terroryzmu są skorelowane z wynikami?
+9. Czy cła są skorelowane z wynikami?
+10. Czy wydatki na ochronę zdrowia są skorelowane z wynikami? (% z PKB)
 
-### Voice and Accountability
-5. Public Sector/Policy & Institutions/Voice and Accountabilit
-6. Desc: extent to which a country's citizens are able to participate in selecting their government, as well as freedom of expression, freedom of association, and a free media
-
-
-# Organizacja pracy
-
-## ETL
-Realizowany za pomocą Microsoft Visual Studio
-
-## Wizualizacja Danych
-Zrealizowana za pomocą MS Excel?
 
 # Diagram (TODO)
 ![](diagram.png)
+
 
 # Dziękujemy za uwagę
