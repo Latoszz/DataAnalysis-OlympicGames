@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="G14_MSSQLDEV.Olympics"
+  DTS:DTSID="{03769665-D7A5-422A-903D-84C5D7E7EC10}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=G14\MSSQLDEV;Initial Catalog=Olympics;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-{03769665-D7A5-422A-903D-84C5D7E7EC10}G14_MSSQLDEV.Olympics;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

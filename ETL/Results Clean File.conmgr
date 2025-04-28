@@ -21,7 +21,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="year"
-          DTS:DTSID="{64D0C51F-63CE-4235-AFD5-12741E94683C}"
+          DTS:DTSID="{9B54B31D-108D-48D2-8C50-817AC9D12E4A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="type"
-          DTS:DTSID="{BAE6E35D-1869-4789-A6A0-0B006195B91A}"
+          DTS:DTSID="{48526466-34DC-41B8-9785-C3E9323CD756}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="discipline"
-          DTS:DTSID="{A2900ED5-87BC-463B-84EE-C80515C246C6}"
+          DTS:DTSID="{FC04B8F4-7FCC-4AE2-91ED-CB9CD5CF0AD9}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="event"
-          DTS:DTSID="{A2A234C2-1D56-453C-9E5D-3C40634F8DE5}"
+          DTS:DTSID="{8F2E9E56-514E-455A-9082-1253F52BB42A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="as"
-          DTS:DTSID="{925746CE-E1C1-46A0-A0B2-F9E6CF898189}"
+          DTS:DTSID="{DC283191-9206-407B-90BF-28630D8D1921}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="athlete_id"
-          DTS:DTSID="{6D7D7ED9-BD39-48DF-A98C-A9211C79E0BD}"
+          DTS:DTSID="{72543473-4DC7-4ACF-899C-B300552596FA}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="noc"
-          DTS:DTSID="{9B5B7FC3-8B97-4414-9C4E-F531F7D3231D}"
+          DTS:DTSID="{C1F8AC41-2091-415C-8A4D-2E6EDD586B5F}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="team"
-          DTS:DTSID="{FC8A9AAF-9AEB-4D6E-AAB1-632A664F32E1}"
+          DTS:DTSID="{27A4C9A1-B207-4367-8416-2BD725CD55DD}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="place"
-          DTS:DTSID="{FFAA6B09-C52D-4519-98DD-5150C5B0D49A}"
+          DTS:DTSID="{61CDB3B9-14DF-4922-9AE0-4B163295EF87}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="tied"
-          DTS:DTSID="{15E944AA-ED8F-46C3-93D4-BD4120E28476}"
+          DTS:DTSID="{2D1A35FC-084C-499E-91A4-1300933D9C51}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="medal"
-          DTS:DTSID="{6ED83020-41CC-488D-BD88-6292CE4E5A9D}"
+          DTS:DTSID="{7BD2A5DA-491C-497D-8651-B09DBFE87F56}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

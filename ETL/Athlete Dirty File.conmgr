@@ -1,0 +1,163 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Athlete Dirty File"
+  DTS:DTSID="{551585F8-5FBF-4C32-9555-A94B7301D744}"
+  DTS:CreationName="FLATFILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:Format="Delimited"
+      DTS:LocaleID="4105"
+      DTS:HeaderRowDelimiter="_x000D__x000A_"
+      DTS:ColumnNamesInFirstDataRow="True"
+      DTS:RowDelimiter=""
+      DTS:TextQualifier="_x0022_"
+      DTS:CodePage="65001"
+      DTS:ConnectionString="C:\Users\macie\Documents\IDH\DataAnalysis-OlympicGames\Data\athletes\bios.csv">
+      <DTS:FlatFileColumns>
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="1199"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Roles"
+          DTS:DTSID="{030F5EF7-FB4C-416B-B512-38E977EE7B5A}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="66"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Sex"
+          DTS:DTSID="{E0FEE57C-5037-48B8-80C9-868B89AB23A4}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="649"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Full name"
+          DTS:DTSID="{2070B0D2-1C9A-489A-9352-FD9D89DB519E}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="308"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Used name"
+          DTS:DTSID="{8C362833-07EC-4A17-8B4F-1009EB3DAF47}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="748"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Born"
+          DTS:DTSID="{2CB9C3E8-BA15-4D02-9F03-3BBDBC628C68}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="726"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Died"
+          DTS:DTSID="{05A45F77-DEB9-44A5-8EDF-92F7C56DC426}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="220"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="NOC"
+          DTS:DTSID="{F112A83A-CB21-422D-8CC2-C325591028EB}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:DataType="20"
+          DTS:TextQualified="True"
+          DTS:ObjectName="athlete_id"
+          DTS:DTSID="{BA45E763-F2EA-4D7E-B927-460CE4E9C130}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="154"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Measurements"
+          DTS:DTSID="{A98BC0D5-29B1-4FDF-84BE-84CEE59449F0}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="1914"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Affiliations"
+          DTS:DTSID="{FAEFAEDD-31CB-48DB-A30E-77F7210CC6F8}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="462"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Nick petnames"
+          DTS:DTSID="{6DFC48BA-D2C6-4624-9CF9-227BBF572BD7}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="209"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Title(s)"
+          DTS:DTSID="{6D88FC6C-CC5E-41D0-9A0C-8C4ED2B259D8}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="407"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Other names"
+          DTS:DTSID="{F5AD4776-414A-4E6F-BAEE-57FB7E61B051}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="143"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Nationality"
+          DTS:DTSID="{31087257-7BE0-4E78-BE62-A86ABCC0FFB4}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="726"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Original name"
+          DTS:DTSID="{CA6BA9C9-DC17-41D1-82C6-21D39C857CA2}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x000A_"
+          DTS:MaximumWidth="88"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Name order"
+          DTS:DTSID="{CE841474-31F6-4A1E-8AFF-6CB3D476B344}"
+          DTS:CreationName="" />
+      </DTS:FlatFileColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

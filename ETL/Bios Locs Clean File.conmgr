@@ -10,117 +10,110 @@
       DTS:HeaderRowDelimiter="_x000D__x000A_"
       DTS:ColumnNamesInFirstDataRow="True"
       DTS:RowDelimiter=""
-      DTS:TextQualifier="_x003C_none_x003E_"
+      DTS:TextQualifier="_x0022_"
       DTS:CodePage="65001"
       DTS:ConnectionString="C:\Users\macie\Documents\IDH\DataAnalysis-OlympicGames\Data\clean-data\bios_locs.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:DataType="20"
           DTS:TextQualified="True"
           DTS:ObjectName="athlete_id"
-          DTS:DTSID="{978F717F-341F-4256-98B7-039F2344D7F8}"
+          DTS:DTSID="{675C2FF8-051A-4E91-8292-ABA050777AC3}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
           DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="name"
-          DTS:DTSID="{B3A43D8A-B6F6-446D-A996-1AB8B06EED58}"
+          DTS:DTSID="{283E44B2-17A5-416B-A9EF-A6C3A15A48D0}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:DataType="7"
           DTS:TextQualified="True"
           DTS:ObjectName="born_date"
-          DTS:DTSID="{838948D5-258E-44D5-ADA7-9317A34369F0}"
+          DTS:DTSID="{2DCCFDDE-2B9B-46D7-B525-B5B005BC11C8}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:MaximumWidth="200"
+          DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="born_city"
-          DTS:DTSID="{3CC75F97-BE3A-43C0-948B-748EE6156085}"
+          DTS:DTSID="{8B1E4DA0-DB8B-4473-99AF-D5DB6A5FD144}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:MaximumWidth="200"
+          DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="born_region"
-          DTS:DTSID="{5F15E30A-FD5F-4D5D-A3A2-56BB0E59B43C}"
+          DTS:DTSID="{7695C92E-88D1-4442-8FBB-E2ABBF2B33DA}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:MaximumWidth="200"
+          DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="born_country"
-          DTS:DTSID="{942289D9-8103-4CDE-8B89-E4F80EFCED1F}"
+          DTS:DTSID="{D06395E8-8697-47AD-B9B1-D5779D13B98B}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:MaximumWidth="200"
+          DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="NOC"
-          DTS:DTSID="{DA70D691-0DBA-4D6A-B1FD-7F11D2FD19D3}"
+          DTS:DTSID="{A6142945-04CE-4B10-9ADB-B616AA787F43}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:DataType="5"
           DTS:TextQualified="True"
           DTS:ObjectName="height_cm"
-          DTS:DTSID="{9125C67A-25D2-4822-AA81-339A21F19B97}"
+          DTS:DTSID="{8FAABB0C-CA65-4CDC-A949-FC8A6ABB45D7}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:DataType="5"
           DTS:TextQualified="True"
           DTS:ObjectName="weight_kg"
-          DTS:DTSID="{3E0F4368-052F-445C-BF3A-63FAE942BA13}"
+          DTS:DTSID="{73F4E37D-829D-4D90-9275-EE63058BCBF1}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:DataType="7"
           DTS:TextQualified="True"
           DTS:ObjectName="died_date"
-          DTS:DTSID="{32D5CC87-25DF-4AB0-AD4F-5E0BDD3DFB65}"
+          DTS:DTSID="{E8A0D5F6-7DED-4C44-9607-79CC512B69D5}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:DataType="5"
           DTS:TextQualified="True"
           DTS:ObjectName="lat"
-          DTS:DTSID="{440AC286-52D9-4D4C-BA22-27E86A10D1A8}"
+          DTS:DTSID="{A1A413CB-00B3-4414-AA8A-845E24CD2284}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x000A_"
-          DTS:MaximumWidth="50"
-          DTS:DataType="129"
+          DTS:DataType="5"
           DTS:TextQualified="True"
           DTS:ObjectName="long"
-          DTS:DTSID="{8F7A9566-AC55-4EDD-9ED7-43CF0720E03D}"
+          DTS:DTSID="{6A3EE16A-5A73-49A5-B459-2F343E209A20}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>
