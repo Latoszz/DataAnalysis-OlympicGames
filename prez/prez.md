@@ -17,7 +17,7 @@ Nazarii Honcharenko
 s25249
 :::
 ::: {.column width="33%"}
-Irys Latosz
+Irys  (Maciej) Łatosz
 s24435
 :::
 ::::::::::::::
@@ -53,8 +53,8 @@ s24435
 10. Czy wydatki na ochronę zdrowia są skorelowane z wynikami? (% z PKB)
 
 
-# Diagram (TODO)
-![](diagram.png)
+# Diagram 
+![](olympics-diagram.png)
 
 
 # Dziękujemy za uwagę
