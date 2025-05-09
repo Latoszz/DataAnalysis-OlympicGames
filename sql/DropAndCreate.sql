@@ -10,35 +10,35 @@ DROP TABLE IF EXISTS [dbo].[PlacementSt];
 
 CREATE TABLE [dbo].[AthleteSt](
 	[idT] [int] NOT NULL,
-	[name] [nvarchar](255) NOT NULL,
-	[height] [decimal](16, 2) NOT NULL,
-	[weight] [decimal](16, 2) NOT NULL,
+	[name] [nvarchar](255),
+	[height] [decimal](16, 2) NULL,
+	[weight] [decimal](16, 2) NULL,
 	[dateborn] [date] NULL,
 	[datedied] [date] NULL,
-	[country] [nvarchar](255) NOT NULL,
+	[country] [nvarchar](255) NULL,
 	[gender] [nvarchar](255) NULL,
-	[NOC] [nvarchar](255) NOT NULL,
+	[NOC] [nvarchar](255) NULL,
 );
 
 
 CREATE TABLE [dbo].[CountryYearSt](
 	[idT] [int] NOT NULL,
-	[year] [int] NOT NULL,
-	[NOC] [nvarchar](max) NOT NULL,
-	[name] [nvarchar](max) NOT NULL,
-	[region] [nvarchar](max) NOT NULL,
+	[year] [int] NULL,
+	[NOC] [nvarchar](max) NULL,
+	[name] [nvarchar](max) NULL,
+	[region] [nvarchar](max) NULL,
 );
 
 CREATE TABLE [dbo].[EventSt](
 	[idT] [int] NOT NULL,
-	[name] [nvarchar](max) NOT NULL,
-	[gender] [nvarchar](max) NOT NULL,
-	[discipline] [nvarchar](max) NOT NULL,
+	[name] [nvarchar](max) NULL,
+	[gender] [nvarchar](max) NULL,
+	[discipline] [nvarchar](max) NULL,
 );
 
 CREATE TABLE [dbo].[MedalSt](
 	[idT] [int] NOT NULL,
-	[name] [nvarchar](max) NOT NULL,
+	[name] [nvarchar](max) NULL,
 );
 
 CREATE TABLE [dbo].[PlacementSt](
@@ -48,11 +48,11 @@ CREATE TABLE [dbo].[PlacementSt](
 
 CREATE TABLE [dbo].[ResultSt](
    CountryYear_AthleteT int  NOT NULL,
-   Athlete_idT int  NOT NULL,
-   CountryYear_OlympicsT int  NOT NULL,
-   Event_idT int  NOT NULL,
-   Medal_idT int  NOT NULL,
-   Placement_idT int  NOT NULL,
+   Athlete_idT int NOT NULL,
+   CountryYear_OlympicsT int NOT NULL,
+   Event_idT int NOT NULL,
+   Medal_idT int NOT NULL,
+   Placement_idT int NOT NULL,
 );
 
 ALTER TABLE [dbo].[AthleteSt] ADD CONSTRAINT PK_AthleteSt PRIMARY KEY (idT);
@@ -161,10 +161,3 @@ REFERENCES [dbo].[Medal] (id);
 ALTER TABLE [dbo].[Result] 
 ADD CONSTRAINT FK_Result_Placement FOREIGN KEY (Placement_id) 
 REFERENCES [dbo].[Placement] (id);
-
-INSERT INTO Medal (id, name)
-VALUES
-(1, 'gold'),
-(2, 'silver'),
-(3, 'bronze'),
-(4, 'no medal');
