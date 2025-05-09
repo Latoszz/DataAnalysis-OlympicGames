@@ -26,11 +26,12 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">G14</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/Q58GG0OAkWJrRl7UFzWPwAAAAACAAAAAAAQZgAAAAEAACAAAADKcE6ZcRD2qMpEJVX5oEZHDpQ69XivOoFQT2k9/yDxWQAAAAAOgAAAAAIAACAAAADwTNBHqlD0b3rmJxZ+tXv8fK8qbTDomfuCSGUZcXMQzJAAAAD1hQ5XYli42rT6C+YHZVSbEEIkloM+ZZLx1bOVZP+VAPwgSYD12wDLL82dd6f/2SQDiqBUtZWEADpQla1a848WL+8jOB8sqcHCra8Fi9esCv/tv0ZP0Zgut5rmK+UPLnx7PDpdR4LAmPTR5KYjS0J2Vds+xz9AIgOr+rwhNkEg4jp6hRm+sVPgwjISfFVdNp5AAAAAL4RRSnbRuqW7d5Bs6WKfc+JkCm3Ddy0/gUTI+aNq9g2WwwDaz6tfps8Zcz1+42pX/emi9SzW+qOMPm/uiV0hiA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/Q58GG0OAkWJrRl7UFzWPwAAAAACAAAAAAAQZgAAAAEAACAAAABWowZ53ef5MbnHHByO5RnHgV7zfiaNekWvhamL7pntkwAAAAAOgAAAAAIAACAAAAD5QMtBcJkXuY+2+rUjDCQ1t3yZjYiVNSH/Y8fCdAeITpAAAACFYEW1NCI/vjRtwm8Ze1RksmJCeqwMDwheTz0/xlikJKWnDkKxSqNu9hv1pKTy0FKASaQ2pq/FVQwE/qkfAMPD5LSLgEiXrPhh0zQR0LfsoqX7Qf2COT/2QSp1FXxth2+s0ixIIjeGqW3NE4oYGAzCn/C9iC3Wr+z10o0ODAl+rmlifOSxOCC+xZI0ZxmVXT9AAAAA5IV1DQsxvXCTDQnd+R5AZmv4GACBtk1snNeRRVZegDjxCSkfKxTXh8vPjbK9IbOFSv/i72IO9YV0blvxbtTjXw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="Athlete.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Medal.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="Bios Locs Clean File.conmgr" />
@@ -985,10 +986,27 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">28</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">38</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{CBA8EF15-177C-468F-BC6F-E0A222A97F45}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C6726FFE-FCFA-4BB6-826F-8A5F7E6F8879}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="Medal.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{43F71938-240A-4953-865F-D5A088BAEB66}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Medal</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{15524268-36B9-4689-8EC3-99B9B32B027C}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
