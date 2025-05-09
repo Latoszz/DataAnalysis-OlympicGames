@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="5/9/2025 4:11:13 PM"
+  DTS:CreationDate="5/9/2025 4:20:04 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="G14"
   DTS:CreatorName="G14\Irys"
-  DTS:DTSID="{43F71938-240A-4953-865F-D5A088BAEB66}"
+  DTS:DTSID="{C7AE31AA-6898-43E5-BAE1-E35A8B3D80FD}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5685.0"
   DTS:LocaleID="4105"
-  DTS:ObjectName="Medal"
+  DTS:ObjectName="Placement"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{EBC6969A-69CC-4024-BA61-26E55B3DE54E}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{603CDD3F-14F6-4C10-AF44-08751E38BEF3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{B3BFF9AC-06F5-4533-B303-F40937286DF6}"
+      DTS:DTSID="{60D0DDE8-BA64-43B5-BB15-9623C00C63BB}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
@@ -31,14 +31,14 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{03769665-D7A5-422A-903D-84C5D7E7EC10}"
-          SQLTask:SqlStatementSource="INSERT INTO MedalSt (idT, name)&#xA;VALUES&#xA;(1, 'gold'),&#xA;(2, 'silver'),&#xA;(3, 'bronze'),&#xA;(4, 'no medal');" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="BEGIN&#xA;    DECLARE @i INT = 1;    &#xA;    WHILE @i &lt;= 255&#xA;    BEGIN&#xA;        INSERT INTO dbo.PlacementSt (idT, number)&#xA;        VALUES (@i, @i);&#xA;        &#xA;        SET @i = @i + 1;&#xA;    END&#xA;   &#xA;END&#xA;&#xA;INSERT INTO dbo.PlacementSt(idT,number)&#xA;VALUES(256,null);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Execute SQL Task 1"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{655AB469-8678-4811-B7CE-D9D6E8ECF884}"
+      DTS:DTSID="{4EA7EB01-F7B5-4E3A-8395-D8A402AF9FDF}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task 1"
@@ -48,7 +48,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{03769665-D7A5-422A-903D-84C5D7E7EC10}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE MedalSt;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE PlacementSt;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -56,7 +56,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{3CE622DF-3A40-4F8D-9AF9-274D01CC4790}"
+      DTS:DTSID="{F860006B-CFA1-42EC-B110-AFCB90B27DA5}"
       DTS:From="Package\Execute SQL Task 1"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -77,37 +77,37 @@
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Execute SQL Task"
-          TopLeft="539.285715433712,290.588235039406" />
+          TopLeft="540.000001149518,276.823529169118" />
         <NodeLayout
           Size="172,41.6"
           Id="Package\Execute SQL Task 1"
-          TopLeft="678.571430015929,155.235293981577" />
+          TopLeft="554.285715465643,155.235293981577" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="764.571430015929,196.835293981577">
+          TopLeft="640.285715465643,196.835293981577">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-144.085714582217,93.7529410578284"
+              EndConnector="-19.0857143161247,79.9882351875408"
               Start="0,0"
-              End="-144.085714582217,86.2529410578284">
+              End="-19.0857143161247,72.4882351875408">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.8764705289142" />
+                    End="0,35.9941175937704" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,42.8764705289142"
-                    Point2="0,46.8764705289142"
-                    Point3="-4,46.8764705289142" />
+                    Point1="0,35.9941175937704"
+                    Point2="0,39.9941175937704"
+                    Point3="-4,39.9941175937704" />
                   <mssgle:LineSegment
-                    End="-140.085714582217,46.8764705289142" />
+                    End="-15.0857143161247,39.9941175937704" />
                   <mssgle:CubicBezierSegment
-                    Point1="-140.085714582217,46.8764705289142"
-                    Point2="-144.085714582217,46.8764705289142"
-                    Point3="-144.085714582217,50.8764705289142" />
+                    Point1="-15.0857143161247,39.9941175937704"
+                    Point2="-19.0857143161247,39.9941175937704"
+                    Point3="-19.0857143161247,43.9941175937704" />
                   <mssgle:LineSegment
-                    End="-144.085714582217,86.2529410578284" />
+                    End="-19.0857143161247,72.4882351875408" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

@@ -1,3 +1,74 @@
+--Staging Tables
+
+DROP TABLE IF EXISTS [dbo].[ResultSt];
+DROP TABLE IF EXISTS [dbo].[AthleteSt]; 
+DROP TABLE IF EXISTS [dbo].[CountryYearSt];
+DROP TABLE IF EXISTS [dbo].[EventSt];
+DROP TABLE IF EXISTS [dbo].[MedalSt];
+DROP TABLE IF EXISTS [dbo].[PlacementSt];
+
+
+CREATE TABLE [dbo].[AthleteSt](
+	[idT] [int] NOT NULL,
+	[name] [nvarchar](255) NOT NULL,
+	[height] [decimal](16, 2) NOT NULL,
+	[weight] [decimal](16, 2) NOT NULL,
+	[dateborn] [date] NULL,
+	[datedied] [date] NULL,
+	[country] [nvarchar](255) NOT NULL,
+	[gender] [nvarchar](255) NULL,
+	[NOC] [nvarchar](255) NOT NULL,
+);
+
+
+CREATE TABLE [dbo].[CountryYearSt](
+	[idT] [int] NOT NULL,
+	[year] [int] NOT NULL,
+	[NOC] [nvarchar](max) NOT NULL,
+	[name] [nvarchar](max) NOT NULL,
+	[region] [nvarchar](max) NOT NULL,
+);
+
+CREATE TABLE [dbo].[EventSt](
+	[idT] [int] NOT NULL,
+	[name] [nvarchar](max) NOT NULL,
+	[gender] [nvarchar](max) NOT NULL,
+	[discipline] [nvarchar](max) NOT NULL,
+);
+
+CREATE TABLE [dbo].[MedalSt](
+	[idT] [int] NOT NULL,
+	[name] [nvarchar](max) NOT NULL,
+);
+
+CREATE TABLE [dbo].[PlacementSt](
+	[idT] [int] NOT NULL,
+	[number] [int] NULL,
+);
+
+CREATE TABLE [dbo].[ResultSt](
+   CountryYear_AthleteT int  NOT NULL,
+   Athlete_idT int  NOT NULL,
+   CountryYear_OlympicsT int  NOT NULL,
+   Event_idT int  NOT NULL,
+   Medal_idT int  NOT NULL,
+   Placement_idT int  NOT NULL,
+);
+
+ALTER TABLE [dbo].[AthleteSt] ADD CONSTRAINT PK_AthleteSt PRIMARY KEY (idT);
+
+ALTER TABLE [dbo].[CountryYearSt] ADD CONSTRAINT PK_CountryYearSt PRIMARY KEY (idT);
+
+ALTER TABLE [dbo].[EventSt] ADD CONSTRAINT PK_EventSt PRIMARY KEY (idT);
+
+ALTER TABLE [dbo].[MedalSt] ADD CONSTRAINT PK_MedalSt PRIMARY KEY (idT);
+
+ALTER TABLE [dbo].[PlacementSt] ADD CONSTRAINT PK_PlacementSt PRIMARY KEY (idT);
+
+ALTER TABLE [dbo].[ResultSt] ADD CONSTRAINT PK_ResultSt PRIMARY KEY (CountryYear_AthleteT, Athlete_idT,CountryYear_OlympicsT,Event_idT,Medal_idT,Placement_idT);
+
+---Final tables
+
 DROP TABLE IF EXISTS [dbo].[Result];
 DROP TABLE IF EXISTS [dbo].[Athlete]; 
 DROP TABLE IF EXISTS [dbo].[CountryYear];
@@ -90,3 +161,10 @@ REFERENCES [dbo].[Medal] (id);
 ALTER TABLE [dbo].[Result] 
 ADD CONSTRAINT FK_Result_Placement FOREIGN KEY (Placement_id) 
 REFERENCES [dbo].[Placement] (id);
+
+INSERT INTO Medal (id, name)
+VALUES
+(1, 'gold'),
+(2, 'silver'),
+(3, 'bronze'),
+(4, 'no medal');
