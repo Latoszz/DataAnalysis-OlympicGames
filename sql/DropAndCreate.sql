@@ -22,7 +22,7 @@ CREATE TABLE [dbo].[AthleteSt](
 
 
 CREATE TABLE [dbo].[CountryYearSt](
-	[idT] [int] NOT NULL,
+	[idT] [int] NOT NULL  IDENTITY (1,1) ,
 	[year] [int] NULL,
 	[NOC] [nvarchar](max) NULL,
 	[name] [nvarchar](max) NULL,
@@ -30,7 +30,7 @@ CREATE TABLE [dbo].[CountryYearSt](
 );
 
 CREATE TABLE [dbo].[EventSt](
-	[idT] [int] NOT NULL,
+	[idT] [int] NOT NULL IDENTITY (1,1),
 	[name] [nvarchar](max) NULL,
 	[gender] [nvarchar](max) NULL,
 	[discipline] [nvarchar](max) NULL,

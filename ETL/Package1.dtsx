@@ -1,27 +1,42 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="5/9/2025 4:11:13 PM"
+  DTS:CreationDate="5/9/2025 4:45:40 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="G14"
   DTS:CreatorName="G14\Irys"
-  DTS:DTSID="{43F71938-240A-4953-865F-D5A088BAEB66}"
+  DTS:DTSID="{9DE07B20-6B9A-4F71-A349-6FCCDA54542F}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5685.0"
   DTS:LocaleID="4105"
-  DTS:ObjectName="Medal"
+  DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{BA1F185F-1C37-45D1-8094-07B74EE41807}">
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{275F51B9-24D0-47B2-A78D-799958B65F36}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{632B6DB8-2258-459F-ACD7-69AB2A2E62FD}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Execute SQL Task"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{B3BFF9AC-06F5-4533-B303-F40937286DF6}"
+      DTS:DTSID="{BB8AF478-6AF6-4539-85F3-1820DA741D89}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute SQL Task"
@@ -31,24 +46,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{03769665-D7A5-422A-903D-84C5D7E7EC10}"
-          SQLTask:SqlStatementSource="INSERT INTO MedalSt (idT, name)&#xA;VALUES&#xA;(1, 'gold'),&#xA;(2, 'silver'),&#xA;(3, 'bronze'),&#xA;(4, 'no medal');" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Execute SQL Task 1"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{655AB469-8678-4811-B7CE-D9D6E8ECF884}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute SQL Task 1"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{03769665-D7A5-422A-903D-84C5D7E7EC10}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE MedalSt;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE ResultSt;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -56,11 +54,11 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{3CE622DF-3A40-4F8D-9AF9-274D01CC4790}"
-      DTS:From="Package\Execute SQL Task 1"
+      DTS:DTSID="{77E723BF-DE08-4FD4-81DB-44BB92D7A00C}"
+      DTS:From="Package\Execute SQL Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Execute SQL Task" />
+      DTS:To="Package\Data Flow Task" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -77,37 +75,37 @@
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Execute SQL Task"
-          TopLeft="666.428572847223,367.058823207671" />
+          TopLeft="645.000001373036,224.058823333016" />
         <NodeLayout
-          Size="172,41.6"
-          Id="Package\Execute SQL Task 1"
-          TopLeft="678.571430015929,155.235293981577" />
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="725.714287259141,373.176470261132" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="764.571430015929,196.835293981577">
+          TopLeft="726.200001373036,265.658823333016">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-16.942857168706,170.223529226094"
+              EndConnector="74.7142858861052,107.517646928116"
               Start="0,0"
-              End="-16.942857168706,162.723529226094">
+              End="74.7142858861052,100.017646928116">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,81.1117646130469" />
+                    End="0,49.7588234640581" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,81.1117646130469"
-                    Point2="0,85.1117646130469"
-                    Point3="-4,85.1117646130469" />
+                    Point1="0,49.7588234640581"
+                    Point2="0,53.7588234640581"
+                    Point3="4,53.7588234640581" />
                   <mssgle:LineSegment
-                    End="-12.942857168706,85.1117646130469" />
+                    End="70.7142858861052,53.7588234640581" />
                   <mssgle:CubicBezierSegment
-                    Point1="-12.942857168706,85.1117646130469"
-                    Point2="-16.942857168706,85.1117646130469"
-                    Point3="-16.942857168706,89.1117646130469" />
+                    Point1="70.7142858861052,53.7588234640581"
+                    Point2="74.7142858861052,53.7588234640581"
+                    Point3="74.7142858861052,57.7588234640581" />
                   <mssgle:LineSegment
-                    End="-16.942857168706,162.723529226094" />
+                    End="74.7142858861052,100.017646928116" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
