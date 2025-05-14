@@ -55,6 +55,11 @@ CREATE TABLE [dbo].[ResultSt](
    Placement_idT int NOT NULL,
 );
 
+CREATE TABLE [dbo].[RawResultClean](
+	[year] int NULL,
+	[type] nvarchar(max) NULL,
+	[discipline] nvarchar(max)
+)
 ALTER TABLE [dbo].[AthleteSt] ADD CONSTRAINT PK_AthleteSt PRIMARY KEY (idT);
 
 ALTER TABLE [dbo].[CountryYearSt] ADD CONSTRAINT PK_CountryYearSt PRIMARY KEY (idT);
