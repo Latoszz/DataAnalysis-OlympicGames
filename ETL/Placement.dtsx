@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Placement"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{603CDD3F-14F6-4C10-AF44-08751E38BEF3}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{3883E873-2E71-4F4F-9FFC-17B470A1D793}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
