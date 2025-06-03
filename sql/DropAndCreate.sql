@@ -8,17 +8,15 @@ DROP TABLE IF EXISTS [dbo].[MedalSt];
 DROP TABLE IF EXISTS [dbo].[PlacementSt];
 
 
-CREATE TABLE [dbo].[AthleteSt](
-	[idT] [int] NOT NULL,
-	[name] [nvarchar](255),
-	[height] [decimal](16, 2) NULL,
-	[weight] [decimal](16, 2) NULL,
-	[dateborn] [date] NULL,
-	[datedied] [date] NULL,
-	[country] [nvarchar](255) NULL,
-	[gender] [nvarchar](255) NULL,
-	[NOC] [nvarchar](255) NULL,
-);
+CREATE TABLE AthleteSt(
+	idT int PRIMARY KEY,
+	height decimal(16,2) NULL,
+	[weight] decimal(16,2) NULL,
+	yearborn int NULL,
+	country nvarchar(max) NULL,
+	gender nvarchar(max) NULL,
+	NOC nvarchar(max) NULL
+)
 
 
 CREATE TABLE [dbo].[CountryYearSt](
