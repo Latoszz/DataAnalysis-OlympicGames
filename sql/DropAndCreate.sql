@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS [dbo].[CountryYearSt];
 DROP TABLE IF EXISTS [dbo].[EventSt];
 DROP TABLE IF EXISTS [dbo].[MedalSt];
 DROP TABLE IF EXISTS [dbo].[PlacementSt];
-
+DROP TABLE IF EXISTS [dbo].[ResultsSourceTmp]
 
 CREATE TABLE AthleteSt(
 	idT int PRIMARY KEY,
@@ -58,6 +58,21 @@ CREATE TABLE [dbo].[RawResultClean](
 	[type] nvarchar(max) NULL,
 	[discipline] nvarchar(max)
 )
+
+CREATE TABLE [dbo].[ResultsSourceTmp](
+	[year] [int] NULL,
+	[type] [nvarchar](max) NULL,
+	[discipline] [nvarchar](max) NULL,
+	[event] [nvarchar](max) NULL,
+	[athlete_name] [nvarchar](max) NULL,
+	[athlete_id] [int] NULL,
+	[NOC] [nvarchar](max) NULL,
+	[team] [nvarchar](max) NULL,
+	[place] [int] NULL,
+	[tied] [bit] NULL,
+	[medal] [nvarchar](max) NULL
+) 
+
 ALTER TABLE [dbo].[AthleteSt] ADD CONSTRAINT PK_AthleteSt PRIMARY KEY (idT);
 
 ALTER TABLE [dbo].[CountryYearSt] ADD CONSTRAINT PK_CountryYearSt PRIMARY KEY (idT);
