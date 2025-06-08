@@ -7,6 +7,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=G14\MSSQLDEV;Initial Catalog=Olympics;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-{03769665-D7A5-422A-903D-84C5D7E7EC10}G14_MSSQLDEV.Olympics;" />
+      DTS:ConnectionString="Data Source=DESKTOP-5KJMF10\SQLEXPRESS;Initial Catalog=SSISDB;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Application Name=SSIS-{03769665-D7A5-422A-903D-84C5D7E7EC10}G14_MSSQLDEV.Olympics;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

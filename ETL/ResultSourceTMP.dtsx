@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="ResultSourceTMP"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{433F8E79-956C-4AF6-B0BB-FAA7B95B602B}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{112F8B3A-9FB5-4030-89FD-12E9891938D6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -392,7 +392,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[ResultsSourceTmp]</property>
+                  name="OpenRowset">[dbo].[ResultsSourceTemp]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -515,19 +515,12 @@
                       cachedName="medal"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[medal]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[medal]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[as]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="as"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[athlete_name]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[as]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[year]"
-                      dataType="i4"
+                      dataType="r8"
                       name="year" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[type]"
@@ -542,10 +535,6 @@
                       dataType="nText"
                       name="event" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[athlete_name]"
-                      dataType="nText"
-                      name="athlete_name" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[athlete_id]"
                       dataType="i4"
                       name="athlete_id" />
@@ -559,7 +548,7 @@
                       name="team" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[place]"
-                      dataType="i4"
+                      dataType="r8"
                       name="place" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[tied]"
@@ -569,6 +558,10 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[medal]"
                       dataType="nText"
                       name="medal" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[athlete_name]"
+                      dataType="nText"
+                      name="athlete_name" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -649,39 +642,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Execute SQL Task"
-          TopLeft="624.285715614655,167.4705880885" />
-        <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task"
           TopLeft="680.714287163348,283.705882104262" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Execute SQL Task"
+          TopLeft="624.285715614655,167.4705880885" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="705.485715614655,209.0705880885">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="50.4285715486931,74.6352940157624"
+              EndConnector="50.428571548693,74.635294015762"
               Start="0,0"
-              End="50.4285715486931,67.1352940157624">
+              End="50.428571548693,67.135294015762">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.3176470078812" />
+                    End="0,33.317647007881" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,33.3176470078812"
-                    Point2="0,37.3176470078812"
-                    Point3="4,37.3176470078812" />
+                    Point1="0,33.317647007881"
+                    Point2="0,37.317647007881"
+                    Point3="4,37.317647007881" />
                   <mssgle:LineSegment
-                    End="46.4285715486931,37.3176470078812" />
+                    End="46.428571548693,37.317647007881" />
                   <mssgle:CubicBezierSegment
-                    Point1="46.4285715486931,37.3176470078812"
-                    Point2="50.4285715486931,37.3176470078812"
-                    Point3="50.4285715486931,41.3176470078812" />
+                    Point1="46.428571548693,37.317647007881"
+                    Point2="50.428571548693,37.317647007881"
+                    Point3="50.428571548693,41.317647007881" />
                   <mssgle:LineSegment
-                    End="50.4285715486931,67.1352940157624" />
+                    End="50.428571548693,67.135294015762" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -699,39 +692,39 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="508.571429654043,380.058823196276" />
+        <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task\Flat File Source"
           TopLeft="472.142858147925,213.352940989458" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="507.142858222431,380.058823196276" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="547.342858147925,254.952940989458">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="45.0000000745057,125.105882206817"
+              EndConnector="46.4285715061185,125.105882206818"
               Start="0,0"
-              End="45.0000000745057,117.605882206817">
+              End="46.4285715061185,117.605882206818">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,58.5529411034085" />
+                    End="0,58.5529411034091" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,58.5529411034085"
-                    Point2="0,62.5529411034085"
-                    Point3="4,62.5529411034085" />
+                    Point1="0,58.5529411034091"
+                    Point2="0,62.5529411034091"
+                    Point3="4,62.5529411034091" />
                   <mssgle:LineSegment
-                    End="41.0000000745057,62.5529411034085" />
+                    End="42.4285715061185,62.5529411034091" />
                   <mssgle:CubicBezierSegment
-                    Point1="41.0000000745057,62.5529411034085"
-                    Point2="45.0000000745057,62.5529411034085"
-                    Point3="45.0000000745057,66.5529411034085" />
+                    Point1="42.4285715061185,62.5529411034091"
+                    Point2="46.4285715061185,62.5529411034091"
+                    Point3="46.4285715061185,66.5529411034091" />
                   <mssgle:LineSegment
-                    End="45.0000000745057,117.605882206817" />
+                    End="46.4285715061185,117.605882206818" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
