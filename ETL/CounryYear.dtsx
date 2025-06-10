@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="CounryYear"
   DTS:PackageType="5"
-  DTS:VersionBuild="66"
-  DTS:VersionGUID="{126967A6-356A-4D55-A5AB-421CCB658888}">
+  DTS:VersionBuild="68"
+  DTS:VersionGUID="{1DA12868-8FD1-4533-89EE-2656CDDB0486}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1316,10 +1316,6 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idT]"
-                      dataType="i4"
-                      name="idT" />
-                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[year]"
                       dataType="i4"
                       name="year" />
@@ -1347,7 +1343,7 @@
                       name="gdp_healthcare_percentage" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[total_population]"
-                      dataType="i4"
+                      dataType="i8"
                       name="total_population" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[avg_tariff]"
@@ -1357,6 +1353,10 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[stability]"
                       dataType="r8"
                       name="stability" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idT]"
+                      dataType="i4"
+                      name="idT" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1496,6 +1496,34 @@
           Size="152.8,41.6"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="203.571429004779,134.717646973696" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="444.285715231482,248.635293992972" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Destination Error Output]"
+          TopLeft="444.285715231482,265.805882212514">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-143.800000670552,0"
+              Start="0,0"
+              End="-136.300000670552,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-136.300000670552,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-141.358906585276,5,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="237.842857477373,65.4612367970512">
@@ -1530,66 +1558,38 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="444.285715231482,248.635293992972" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
           TopLeft="279.971429004779,176.317646973696">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="249.514286226703,72.3176470192763"
+              EndConnector="249.514286226703,72.317647019276"
               Start="0,0"
-              End="249.514286226703,64.8176470192763">
+              End="249.514286226703,64.817647019276">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.1588235096381" />
+                    End="0,32.158823509638" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,32.1588235096381"
-                    Point2="0,36.1588235096381"
-                    Point3="4,36.1588235096381" />
+                    Point1="0,32.158823509638"
+                    Point2="0,36.158823509638"
+                    Point3="4,36.158823509638" />
                   <mssgle:LineSegment
-                    End="245.514286226703,36.1588235096381" />
+                    End="245.514286226703,36.158823509638" />
                   <mssgle:CubicBezierSegment
-                    Point1="245.514286226703,36.1588235096381"
-                    Point2="249.514286226703,36.1588235096381"
-                    Point3="249.514286226703,40.1588235096381" />
+                    Point1="245.514286226703,36.158823509638"
+                    Point2="249.514286226703,36.158823509638"
+                    Point3="249.514286226703,40.158823509638" />
                   <mssgle:LineSegment
-                    End="249.514286226703,64.8176470192763" />
+                    End="249.514286226703,64.817647019276" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Destination Error Output]"
-          TopLeft="444.285715231482,265.805882212515">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-143.800000670552,0"
-              Start="0,0"
-              End="-136.300000670552,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-136.300000670552,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-141.358906585276,5,146.4178125,11.43359375"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -65,6 +65,7 @@ CREATE TABLE [dbo].[PlacementSt](
 );
 
 CREATE TABLE [dbo].[ResultSt](
+   [id] [int] NOT NULL IDENTITY (1,1) ,
    CountryYear_AthleteT int  NOT NULL,
    Athlete_idT int NOT NULL,
    CountryYear_OlympicsT int NOT NULL,
@@ -86,8 +87,6 @@ ALTER TABLE [dbo].[EventSt] ADD CONSTRAINT PK_EventSt PRIMARY KEY (idT);
 ALTER TABLE [dbo].[MedalSt] ADD CONSTRAINT PK_MedalSt PRIMARY KEY (idT);
 
 ALTER TABLE [dbo].[PlacementSt] ADD CONSTRAINT PK_PlacementSt PRIMARY KEY (idT);
-
-ALTER TABLE [dbo].[ResultSt] ADD CONSTRAINT PK_ResultSt PRIMARY KEY (CountryYear_AthleteT, Athlete_idT,CountryYear_OlympicsT,Event_idT,Medal_idT,Placement_idT);
 
 ---Final tables
 
@@ -113,7 +112,7 @@ CREATE TABLE [dbo].[Athlete](
 
 
 CREATE TABLE [dbo].[CountryYear](
-	[id] [int] NOT NULL IDENTITY (1,1) ,
+	[id] [int] NOT NULL,
 	[year] [int] NULL,
 	[NOC] [nvarchar](255) NULL,
 	[name] [nvarchar](255) NULL,
@@ -143,6 +142,7 @@ CREATE TABLE [dbo].[Placement](
 );
 
 CREATE TABLE [dbo].[Result](
+   [id] [int] NOT NULL IDENTITY (1,1) ,
    CountryYear_Athlete int  NOT NULL,
    Athlete_id int  NOT NULL,
    CountryYear_Olympics int  NOT NULL,
@@ -160,8 +160,6 @@ ALTER TABLE [dbo].[Event] ADD CONSTRAINT PK_Event PRIMARY KEY (id);
 ALTER TABLE [dbo].[Medal] ADD CONSTRAINT PK_Medal PRIMARY KEY (id);
 
 ALTER TABLE [dbo].[Placement] ADD CONSTRAINT PK_Placement PRIMARY KEY (id);
-
-ALTER TABLE [dbo].[Result] ADD CONSTRAINT PK_Result PRIMARY KEY (CountryYear_Athlete, Athlete_id,CountryYear_Olympics,Event_id,Medal_id,Placement_id);
 
 
 --add fk

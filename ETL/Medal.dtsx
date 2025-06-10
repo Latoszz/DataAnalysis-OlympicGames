@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Medal"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{BA1F185F-1C37-45D1-8094-07B74EE41807}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{446A683D-EAA5-459C-94AD-339FAAB64444}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
