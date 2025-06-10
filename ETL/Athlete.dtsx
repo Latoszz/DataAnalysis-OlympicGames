@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="53"
-  DTS:VersionGUID="{893507AE-7376-4E4D-96D6-41ADA999DD16}">
+  DTS:VersionBuild="57"
+  DTS:VersionGUID="{E49919A3-646F-45D3-987E-FBCD1C99DB1D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -567,11 +567,11 @@
                       refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[long]"
                       dataType="r8"
                       errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="IgnoreFailure"
                       externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[long]"
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[long]"
                       name="long"
-                      truncationRowDisposition="RedirectRow">
+                      truncationRowDisposition="IgnoreFailure">
                       <properties>
                         <property
                           dataType="System.Boolean"
@@ -1806,15 +1806,18 @@
                       scale="2" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="255"
                       name="country" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="255"
                       name="gender" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NOC]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="255"
                       name="NOC" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearborn]"
@@ -2653,7 +2656,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-25.41428578499,35.5529411034084,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2730,26 +2735,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11.4571429377301,86.8705881226847"
+              EndConnector="11.45714293773,86.8705881226847"
               Start="0,0"
-              End="11.4571429377301,79.3705881226847">
+              End="11.45714293773,79.3705881226847">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.4352940613423" />
+                    End="0,39.4352940613424" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,39.4352940613423"
-                    Point2="0,43.4352940613423"
-                    Point3="4,43.4352940613423" />
+                    Point1="0,39.4352940613424"
+                    Point2="0,43.4352940613424"
+                    Point3="4,43.4352940613424" />
                   <mssgle:LineSegment
-                    End="7.45714293773005,43.4352940613423" />
+                    End="7.45714293773,43.4352940613424" />
                   <mssgle:CubicBezierSegment
-                    Point1="7.45714293773005,43.4352940613423"
-                    Point2="11.4571429377301,43.4352940613423"
-                    Point3="11.4571429377301,47.4352940613423" />
+                    Point1="7.45714293773,43.4352940613424"
+                    Point2="11.45714293773,43.4352940613424"
+                    Point3="11.45714293773,47.4352940613424" />
                   <mssgle:LineSegment
-                    End="11.4571429377301,79.3705881226847" />
+                    End="11.45714293773,79.3705881226847" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
