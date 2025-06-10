@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="68"
-  DTS:VersionGUID="{F3DAB71B-1DB8-4C1F-A971-94E39FD5BF23}">
+  DTS:VersionBuild="85"
+  DTS:VersionGUID="{8A21862B-989D-4EB7-84C0-025A47050C5C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -32,129 +32,6 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Conditional Split"
-              componentClassID="Microsoft.ConditionalSplit"
-              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
-              name="Conditional Split"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
-                  description="Input to the Conditional Split Transformation"
-                  name="Conditional Split Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[athlete_id]"
-                      cachedDataType="i8"
-                      cachedName="athlete_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[athlete_id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input].Columns[born_date]"
-                      cachedDataType="date"
-                      cachedName="born_date"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_date]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split.Outputs[Ignore]"
-                  description="Output 1 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="Ignore"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[athlete_id]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(athlete_id)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">0</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split.Outputs[noBornDate]"
-                  description="Output 2 of the Conditional Split Transformation"
-                  errorOrTruncationOperation="Computation"
-                  errorRowDisposition="FailComponent"
-                  exclusionGroup="1"
-                  name="noBornDate"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
-                  truncationRowDisposition="FailComponent">
-                  <properties>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_date]})</property>
-                    <property
-                      containsID="true"
-                      dataType="System.String"
-                      description="Specifies the friendly version of the expression. This expression version uses column names."
-                      expressionType="Notify"
-                      name="FriendlyExpression">ISNULL(born_date)</property>
-                    <property
-                      dataType="System.Int32"
-                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
-                      name="EvaluationOrder">1</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Default Output]"
-                  description="Default Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  name="Conditional Split Default Output"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
-                  <properties>
-                    <property
-                      dataType="System.Boolean"
-                      name="IsDefaultOut">true</property>
-                  </properties>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output]"
-                  description="Error Output of the Conditional Split Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\Derived Column"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -171,7 +48,17 @@
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[born_date]"
                       cachedDataType="date"
                       cachedName="born_date"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_date]" />
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_date]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[height_cm]"
+                      cachedDataType="r8"
+                      cachedName="height_cm"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[height_cm]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[weight_kg]"
+                      cachedDataType="r8"
+                      cachedName="weight_kg"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[weight_kg]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -197,13 +84,57 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">[YEAR](#{Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_date]})</property>
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_date]}) ? NULL(DT_I4) : [YEAR](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_date]})</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">YEAR(born_date)</property>
+                          name="FriendlyExpression">ISNULL(born_date) ? NULL(DT_I4) : YEAR(born_date)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[weight]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[weight]"
+                      name="weight"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[weight_kg]}) ? 72 : (DT_I4)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[weight_kg]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(weight_kg) ? 72 : (DT_I4)weight_kg</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[height]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[height]"
+                      name="height"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ISNULL](#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[height_cm]}) ? 176 : (DT_I4)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[height_cm]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ISNULL(height_cm) ? 176 : (DT_I4)height_cm</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -235,71 +166,105 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Derived Column 2"
+              refId="Package\Data Flow Task\Derived Column 1"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Derived Column 2"
+              name="Derived Column 1"
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Derived Column 2.Inputs[Derived Column Input]"
+                  refId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input].Columns[weight]"
+                      cachedDataType="i4"
+                      cachedName="weight"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[weight]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input].Columns[height]"
+                      cachedDataType="i4"
+                      cachedName="height"
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[height]" />
+                  </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Output]"
+                  refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task\Derived Column 2.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Output].Columns[yearborn]"
+                      refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[weight_cat]"
                       dataType="i4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Output].Columns[yearborn]"
-                      name="yearborn"
+                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[weight_cat]"
+                      name="weight_cat"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">NULL(DT_I4)</property>
+                          name="Expression">(#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[weight]} / 5) * 5</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">NULL(DT_I4)</property>
+                          name="FriendlyExpression">(weight / 5) * 5</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[height_cat]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[height_cat]"
+                      name="height_cat"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(#{Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[height]} / 5) * 5</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(height / 5) * 5</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Error Output]"
+                  refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task\Derived Column 2.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -671,1003 +636,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Flat File Source 1"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="4105"
-              name="Flat File Source 1"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">true</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Source 1.Connections[FlatFileConnection]"
-                  connectionManagerID="{551585F8-5FBF-4C32-9555-A94B7301D744}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Athlete Dirty File]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[athlete_id]"
-                      dataType="i8"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[athlete_id]"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[athlete_id]"
-                      name="athlete_id"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[Gender]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sex]"
-                      length="66"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[Gender]"
-                      name="Gender"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Roles]"
-                      codePage="65001"
-                      dataType="str"
-                      length="1199"
-                      name="Roles" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Sex]"
-                      dataType="wstr"
-                      length="66"
-                      name="Sex" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Full name]"
-                      codePage="65001"
-                      dataType="str"
-                      length="649"
-                      name="Full name" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Used name]"
-                      codePage="65001"
-                      dataType="str"
-                      length="308"
-                      name="Used name" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Born]"
-                      codePage="65001"
-                      dataType="str"
-                      length="748"
-                      name="Born" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Died]"
-                      codePage="65001"
-                      dataType="str"
-                      length="726"
-                      name="Died" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[NOC]"
-                      codePage="65001"
-                      dataType="str"
-                      length="220"
-                      name="NOC" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[athlete_id]"
-                      dataType="i8"
-                      name="athlete_id" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Measurements]"
-                      codePage="65001"
-                      dataType="str"
-                      length="154"
-                      name="Measurements" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Affiliations]"
-                      codePage="65001"
-                      dataType="str"
-                      length="1914"
-                      name="Affiliations" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Nick petnames]"
-                      codePage="65001"
-                      dataType="str"
-                      length="462"
-                      name="Nick petnames" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Title(s)]"
-                      codePage="65001"
-                      dataType="str"
-                      length="209"
-                      name="Title(s)" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Other names]"
-                      codePage="65001"
-                      dataType="str"
-                      length="407"
-                      name="Other names" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Nationality]"
-                      codePage="65001"
-                      dataType="str"
-                      length="143"
-                      name="Nationality" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Original name]"
-                      codePage="65001"
-                      dataType="str"
-                      length="726"
-                      name="Original name" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Name order]"
-                      codePage="65001"
-                      dataType="str"
-                      length="88"
-                      name="Name order" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="65001"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Merge"
-              componentClassID="Microsoft.Merge"
-              contactInfo="Merge;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combines rows from multiple sorted data flows into one sorted data flow. Unlike the Merge Join, all rows flow to the output. For example, combine two sorted lists of customers into a single sorted list. If sorting is not important, use the Union All transformation. "
-              name="Merge"
-              version="1">
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1]"
-                  name="Merge Input 1">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[athlete_id]"
-                      cachedDataType="i8"
-                      cachedName="athlete_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[athlete_id]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[athlete_id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[name]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="name"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[name]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[name]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[born_date]"
-                      cachedDataType="date"
-                      cachedName="born_date"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_date]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_date]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[born_city]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_city"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_city]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_city]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[born_region]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_region"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_region]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_region]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[born_country]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_country"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_country]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_country]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[NOC]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="NOC"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[NOC]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[NOC]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[height_cm]"
-                      cachedDataType="r8"
-                      cachedName="height_cm"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[height_cm]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[height_cm]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[weight_kg]"
-                      cachedDataType="r8"
-                      cachedName="weight_kg"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[weight_kg]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[weight_kg]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[died_date]"
-                      cachedDataType="date"
-                      cachedName="died_date"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[died_date]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[died_date]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[lat]"
-                      cachedDataType="r8"
-                      cachedName="lat"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[lat]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[lat]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[long]"
-                      cachedDataType="r8"
-                      cachedName="long"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[long]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[long]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[Gender]"
-                      cachedDataType="wstr"
-                      cachedLength="66"
-                      cachedName="Gender"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Gender]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Gender]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 1].Columns[yearborn]"
-                      cachedDataType="i4"
-                      cachedName="yearborn"
-                      lineageId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Output].Columns[yearborn]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[yearborn]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2]"
-                  name="Merge Input 2">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[athlete_id]"
-                      cachedDataType="i8"
-                      cachedName="athlete_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[athlete_id]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[athlete_id]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[name]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="name"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[name]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[name]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[born_date]"
-                      cachedDataType="date"
-                      cachedName="born_date"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_date]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_date]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[born_city]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_city"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_city]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_city]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[born_region]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_region"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_region]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_region]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[born_country]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_country"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_country]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_country]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[NOC]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="NOC"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[NOC]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[NOC]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[height_cm]"
-                      cachedDataType="r8"
-                      cachedName="height_cm"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[height_cm]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[height_cm]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[weight_kg]"
-                      cachedDataType="r8"
-                      cachedName="weight_kg"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[weight_kg]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[weight_kg]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[died_date]"
-                      cachedDataType="date"
-                      cachedName="died_date"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[died_date]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[died_date]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[lat]"
-                      cachedDataType="r8"
-                      cachedName="lat"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[lat]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[lat]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[long]"
-                      cachedDataType="r8"
-                      cachedName="long"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[long]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[long]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[Gender]"
-                      cachedDataType="wstr"
-                      cachedLength="66"
-                      cachedName="Gender"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Gender]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Gender]}</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge.Inputs[Merge Input 2].Columns[yearborn]"
-                      cachedDataType="i4"
-                      cachedName="yearborn"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[yearborn]">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[yearborn]}</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1]"
-                  isSorted="true"
-                  name="Merge Output 1">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[athlete_id]"
-                      dataType="i8"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[athlete_id]"
-                      name="athlete_id"
-                      sortKeyPosition="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[name]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[name]"
-                      name="name" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_date]"
-                      dataType="date"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_date]"
-                      name="born_date" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_city]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_city]"
-                      name="born_city" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_region]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_region]"
-                      name="born_region" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_country]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_country]"
-                      name="born_country" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[NOC]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[NOC]"
-                      name="NOC" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[height_cm]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[height_cm]"
-                      name="height_cm" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[weight_kg]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[weight_kg]"
-                      name="weight_kg" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[died_date]"
-                      dataType="date"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[died_date]"
-                      name="died_date" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[lat]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[lat]"
-                      name="lat" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[long]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[long]"
-                      name="long" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Gender]"
-                      dataType="wstr"
-                      length="66"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Gender]"
-                      name="Gender" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[yearborn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[yearborn]"
-                      name="yearborn" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Merge Join"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
-              name="Merge Join"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of join to perform."
-                  name="JoinType"
-                  typeConverter="JoinType">2</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the number of columns in the ordering key."
-                  name="NumKeyColumns">1</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the null values are treated as equal values."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Indicates the requested maximum buffers per input before blocking."
-                  name="MaxBuffersPerInput">5</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Left Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[athlete_id]"
-                      cachedDataType="i8"
-                      cachedName="athlete_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[athlete_id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[name]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="name"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[name]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[born_date]"
-                      cachedDataType="date"
-                      cachedName="born_date"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_date]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[born_city]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_city"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_city]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[born_region]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_region"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_region]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[born_country]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_country"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_country]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[NOC]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="NOC"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[NOC]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[height_cm]"
-                      cachedDataType="r8"
-                      cachedName="height_cm"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[height_cm]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[weight_kg]"
-                      cachedDataType="r8"
-                      cachedName="weight_kg"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[weight_kg]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[died_date]"
-                      cachedDataType="date"
-                      cachedName="died_date"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[died_date]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[lat]"
-                      cachedDataType="r8"
-                      cachedName="lat"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[lat]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[long]"
-                      cachedDataType="r8"
-                      cachedName="long"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[long]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
-                  hasSideEffects="true"
-                  name="Merge Join Right Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[athlete_id]"
-                      cachedDataType="i8"
-                      cachedName="athlete_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[athlete_id]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[Gender]"
-                      cachedDataType="wstr"
-                      cachedLength="66"
-                      cachedName="Gender"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Gender]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output]"
-                  isSorted="true"
-                  name="Merge Join Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[athlete_id]"
-                      dataType="i8"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[athlete_id]"
-                      name="athlete_id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[athlete_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[name]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[name]"
-                      name="name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[name]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_date]"
-                      dataType="date"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_date]"
-                      name="born_date">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[born_date]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_city]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_city]"
-                      name="born_city">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[born_city]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_region]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_region]"
-                      name="born_region">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[born_region]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_country]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[born_country]"
-                      name="born_country">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[born_country]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[NOC]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[NOC]"
-                      name="NOC">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[NOC]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[height_cm]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[height_cm]"
-                      name="height_cm">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[height_cm]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[weight_kg]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[weight_kg]"
-                      name="weight_kg">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[weight_kg]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[died_date]"
-                      dataType="date"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[died_date]"
-                      name="died_date">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[died_date]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[lat]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[lat]"
-                      name="lat">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[lat]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[long]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[long]"
-                      name="long">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input].Columns[long]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Gender]"
-                      dataType="wstr"
-                      length="66"
-                      lineageId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output].Columns[Gender]"
-                      name="Gender">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input].Columns[Gender]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Data Flow Task\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -1705,7 +673,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -1717,7 +685,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -1740,89 +708,52 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[NOC]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="NOC"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NOC]"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[NOC]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[height_cm]"
-                      cachedDataType="r8"
-                      cachedName="height_cm"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[height]"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[height_cm]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[weight_kg]"
-                      cachedDataType="r8"
-                      cachedName="weight_kg"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[weight]"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[weight_kg]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[born_country]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_country"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[born_country]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gender]"
-                      cachedDataType="wstr"
-                      cachedLength="66"
-                      cachedName="Gender"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[Gender]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[athlete_id]"
-                      cachedDataType="i8"
-                      cachedName="athlete_id"
-                      cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idT]"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[athlete_id]" />
-                    <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[yearborn]"
                       cachedDataType="i4"
                       cachedName="yearborn"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearborn]"
-                      lineageId="Package\Data Flow Task\Merge.Outputs[Merge Output 1].Columns[yearborn]" />
+                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[yearborn]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[athlete_id]"
+                      cachedDataType="i8"
+                      cachedName="athlete_id"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idT]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[athlete_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[height_cat]"
+                      cachedDataType="i4"
+                      cachedName="height_cat"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[height]"
+                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[height_cat]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[weight_cat]"
+                      cachedDataType="i4"
+                      cachedName="weight_cat"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[weight]"
+                      lineageId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output].Columns[weight_cat]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[height]"
-                      dataType="numeric"
-                      name="height"
-                      precision="16"
-                      scale="2" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[weight]"
-                      dataType="numeric"
-                      name="weight"
-                      precision="16"
-                      scale="2" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
-                      dataType="wstr"
-                      length="255"
-                      name="country" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
-                      dataType="wstr"
-                      length="255"
-                      name="gender" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[NOC]"
-                      dataType="wstr"
-                      length="255"
-                      name="NOC" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idT]"
                       dataType="i4"
                       name="idT" />
                     <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[height]"
+                      dataType="i4"
+                      name="height" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[weight]"
+                      dataType="i4"
+                      name="weight" />
+                    <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[yearborn]"
                       dataType="i4"
                       name="yearborn" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[idnew]"
+                      dataType="i4"
+                      name="idnew" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1851,554 +782,23 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Data Flow Task\Sort"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[athlete_id]"
-                      cachedDataType="i8"
-                      cachedName="athlete_id"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[athlete_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[name]"
-                      cachedDataType="wstr"
-                      cachedLength="50"
-                      cachedName="name"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[name]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[born_date]"
-                      cachedDataType="date"
-                      cachedName="born_date"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_date]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[born_city]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_city"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_city]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[born_region]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_region"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_region]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[born_country]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="born_country"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_country]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[NOC]"
-                      cachedDataType="wstr"
-                      cachedLength="200"
-                      cachedName="NOC"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[NOC]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[height_cm]"
-                      cachedDataType="r8"
-                      cachedName="height_cm"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[height_cm]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[weight_kg]"
-                      cachedDataType="r8"
-                      cachedName="weight_kg"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[weight_kg]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[died_date]"
-                      cachedDataType="date"
-                      cachedName="died_date"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[died_date]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[lat]"
-                      cachedDataType="r8"
-                      cachedName="lat"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lat]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort.Inputs[Sort Input].Columns[long]"
-                      cachedDataType="r8"
-                      cachedName="long"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[long]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Sort.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[athlete_id]"
-                      dataType="i8"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[athlete_id]"
-                      name="athlete_id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[athlete_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[name]"
-                      dataType="wstr"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[name]"
-                      name="name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[name]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_date]"
-                      dataType="date"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_date]"
-                      name="born_date">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_date]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_city]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_city]"
-                      name="born_city">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_city]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_region]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_region]"
-                      name="born_region">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_region]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_country]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[born_country]"
-                      name="born_country">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[born_country]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[NOC]"
-                      dataType="wstr"
-                      length="200"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[NOC]"
-                      name="NOC">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[NOC]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[height_cm]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[height_cm]"
-                      name="height_cm">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[height_cm]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[weight_kg]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[weight_kg]"
-                      name="weight_kg">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[weight_kg]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[died_date]"
-                      dataType="date"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[died_date]"
-                      name="died_date">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[died_date]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[lat]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[lat]"
-                      name="lat">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lat]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[long]"
-                      dataType="r8"
-                      lineageId="Package\Data Flow Task\Sort.Outputs[Sort Output].Columns[long]"
-                      name="long">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[long]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Sort 1"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
-              name="Sort 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the maximum number of threads to use for sorting."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
-                  name="Sort Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[athlete_id]"
-                      cachedDataType="i8"
-                      cachedName="athlete_id"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[athlete_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Sort 1.Inputs[Sort Input].Columns[Gender]"
-                      cachedDataType="wstr"
-                      cachedLength="66"
-                      cachedName="Gender"
-                      lineageId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[Gender]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the comparison options for character data."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the sort order of the column."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]"
-                  isSorted="true"
-                  name="Sort Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[athlete_id]"
-                      dataType="i8"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[athlete_id]"
-                      name="athlete_id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[athlete_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Gender]"
-                      dataType="wstr"
-                      length="66"
-                      lineageId="Package\Data Flow Task\Sort 1.Outputs[Sort Output].Columns[Gender]"
-                      name="Gender">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output].Columns[Gender]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Conditional Split Default Output]"
-              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
-              name="Conditional Split Default Output"
-              startId="Package\Data Flow Task\Conditional Split.Outputs[Conditional Split Default Output]" />
-            <path
               refId="Package\Data Flow Task.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task\Merge.Inputs[Merge Input 2]"
+              endId="Package\Data Flow Task\Derived Column 1.Inputs[Derived Column Input]"
               name="Derived Column Output"
               startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output1]"
-              endId="Package\Data Flow Task\Merge.Inputs[Merge Input 1]"
+              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column 2.Outputs[Derived Column Output]" />
+              startId="Package\Data Flow Task\Derived Column 1.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\Sort.Inputs[Sort Input]"
+              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
-              endId="Package\Data Flow Task\Sort 1.Inputs[Sort Input]"
-              name="Flat File Source Output"
-              startId="Package\Data Flow Task\Flat File Source 1.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Merge Join Output]"
-              endId="Package\Data Flow Task\Conditional Split.Inputs[Conditional Split Input]"
-              name="Merge Join Output"
-              startId="Package\Data Flow Task\Merge Join.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Merge Output 1]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Merge Output 1"
-              startId="Package\Data Flow Task\Merge.Outputs[Merge Output 1]" />
-            <path
-              refId="Package\Data Flow Task.Paths[noBornDate]"
-              endId="Package\Data Flow Task\Derived Column 2.Inputs[Derived Column Input]"
-              name="noBornDate"
-              startId="Package\Data Flow Task\Conditional Split.Outputs[noBornDate]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Sort Output]"
-              endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Data Flow Task\Sort.Outputs[Sort Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Sort Output1]"
-              endId="Package\Data Flow Task\Merge Join.Inputs[Merge Join Right Input]"
-              name="Sort Output"
-              startId="Package\Data Flow Task\Sort 1.Outputs[Sort Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -2420,6 +820,23 @@
           SQLTask:SqlStatementSource="TRUNCATE TABLE AthleteSt;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task 1"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{15CC69AC-12EA-4EAA-BA75-6DB2F378578F}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task 1"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{03769665-D7A5-422A-903D-84C5D7E7EC10}"
+          SQLTask:SqlStatementSource="SELECT&#xA;  idT,&#xA;  [weight] as [weight],&#xA;  height as [height],&#xA;  yearborn as [yearborn],&#xA;  DENSE_RANK() OVER (&#xA;    ORDER BY [weight], height, yearborn&#xA;  ) AS idnew&#xA;INTO #TempAthletesGrouped&#xA;FROM AthletesT a;&#xA;&#xA;TRUNCATE TABLE AthleteSt;&#xA;&#xA;INSERT INTO AthleteSt(idT, height, [weight], yearborn, idnew)&#xA;SELECT idT, height, [weight], yearborn, idnew FROM #TempAthletesGrouped;&#xA;&#xA;DROP TABLE #TempAthletesGrouped;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -2430,6 +847,15 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Data Flow Task" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{CA2850C5-625F-4385-8339-60E293C0E3D2}"
+      DTS:From="Package\Data Flow Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Execute SQL Task 1"
+      DTS:Value="2" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -2442,7 +868,7 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task"
@@ -2450,39 +876,55 @@
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Execute SQL Task"
-          TopLeft="578.571429803055,67.2941175880729" />
+          TopLeft="534.693878689243,127.378151148852" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="659.771429803055,108.894117588073">
+          TopLeft="619.118368498412,168.978151148852">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-37.428571495474,136.576470432057"
+              EndConnector="0,76.4924368712776"
               Start="0,0"
-              End="-37.428571495474,129.076470432057">
+              End="0,68.9924368712776">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,64.2882352160285" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,64.2882352160285"
-                    Point2="0,68.2882352160285"
-                    Point3="-4,68.2882352160285" />
-                  <mssgle:LineSegment
-                    End="-33.428571495474,68.2882352160285" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-33.428571495474,68.2882352160285"
-                    Point2="-37.428571495474,68.2882352160285"
-                    Point3="-37.428571495474,72.2882352160285" />
-                  <mssgle:LineSegment
-                    End="-37.428571495474,129.076470432057" />
+                    End="0,68.9924368712776" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Execute SQL Task 1"
+          TopLeft="541.836735847306,396.739495627873" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="625.089797077443,287.07058802013">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,109.668907607743"
+              Start="0,0"
+              End="0,102.168907607743">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,102.168907607743" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-25.304453125,45.2797663038715,50.60890625,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2492,368 +934,102 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="372.600000670552,190.411764538979" />
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Data Flow Task\Merge Join"
-          TopLeft="592.85714411918,295.941176211184" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Data Flow Task\Derived Column 2"
-          TopLeft="255.000000542828,461.623529032378" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="429.081633566463,686.705881751017" />
-        <NodeLayout
-          Size="159.2,41.6"
-          Id="Package\Data Flow Task\Flat File Source 1"
-          TopLeft="665.714287131416,74.9411764048993" />
-        <NodeLayout
-          Size="107.2,41.6"
-          Id="Package\Data Flow Task\Merge"
-          TopLeft="463.877552007881,586.184873491865" />
-        <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="630.714287056911,194.999999829075" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="334.742857732822,61.9411764162943" />
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Data Flow Task\Conditional Split"
-          TopLeft="395.000000840851,365.529411444305" />
+          TopLeft="415.355102802383,195.218487223841" />
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\Data Flow Task\Derived Column"
-          TopLeft="610.00000129853,459.478991193887" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="680.919048921379,236.599999829075">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.3411763821094"
-              Start="0,0"
-              End="0,51.8411763821094">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.8411763821094" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="421.400000670552,232.011764538979">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="215.990476781961,63.9294116722054"
-              Start="0,0"
-              End="215.990476781961,56.4294116722054">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.8898708203559" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.8898708203559"
-                    Point2="0,37.8898708203559"
-                    Point3="4,37.8898708203559" />
-                  <mssgle:LineSegment
-                    End="211.990476781961,37.8898708203559" />
-                  <mssgle:CubicBezierSegment
-                    Point1="211.990476781961,37.8898708203559"
-                    Point2="215.990476781961,37.8898708203559"
-                    Point3="215.990476781961,41.8898708203559" />
-                  <mssgle:LineSegment
-                    End="215.990476781961,56.4294116722054" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[noBornDate]"
-          TopLeft="447.800000840851,407.129411444305">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-111.600000298023,54.4941175880731"
-              Start="0,0"
-              End="-111.600000298023,46.9941175880731">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.1329954511558" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.1329954511558"
-                    Point2="0,22.1329954511558"
-                    Point3="-4,22.1329954511558" />
-                  <mssgle:LineSegment
-                    End="-107.600000298023,22.1329954511558" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-107.600000298023,22.1329954511558"
-                    Point2="-111.600000298023,22.1329954511558"
-                    Point3="-111.600000298023,26.1329954511558" />
-                  <mssgle:LineSegment
-                    End="-111.600000298023,46.9941175880731" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-82.4079688990115,27.1329954511558,53.2159375,9.421875"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Merge Output 1]"
-          TopLeft="515.879592787172,627.784873491865">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.9210082591522"
-              Start="0,0"
-              End="0,51.4210082591522">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.4210082591522" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,17.7105041295761,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Merge Join Output]"
-          TopLeft="657.65714411918,337.541176211184">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-185.457143278329,27.988235233121"
-              Start="0,0"
-              End="-185.457143278329,20.488235233121">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.99411761656052" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.99411761656052"
-                    Point2="0,13.9941176165605"
-                    Point3="-4,13.9941176165605" />
-                  <mssgle:LineSegment
-                    End="-181.457143278329,13.9941176165605" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-181.457143278329,13.9941176165605"
-                    Point2="-185.457143278329,13.9941176165605"
-                    Point3="-185.457143278329,17.9941176165605" />
-                  <mssgle:LineSegment
-                    End="-185.457143278329,20.488235233121" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
-          TopLeft="745.314287131416,116.541176404899">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-61.4000000745054,78.4588234241757"
-              Start="0,0"
-              End="-61.4000000745054,70.9588234241757">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.2294117120878" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.2294117120878"
-                    Point2="0,39.2294117120878"
-                    Point3="-4,39.2294117120878" />
-                  <mssgle:LineSegment
-                    End="-57.4000000745054,39.2294117120878" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-57.4000000745054,39.2294117120878"
-                    Point2="-61.4000000745054,39.2294117120878"
-                    Point3="-61.4000000745054,43.2294117120878" />
-                  <mssgle:LineSegment
-                    End="-61.4000000745054,70.9588234241757" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="414.591837617251,331.445377860735" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="409.942857732822,103.541176416294">
+          TopLeft="490.773470209817,236.818487223841">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11.45714293773,86.8705881226847"
+              EndConnector="0,94.6268906368938"
               Start="0,0"
-              End="11.45714293773,79.3705881226847">
+              End="0,87.1268906368938">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.4352940613424" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,39.4352940613424"
-                    Point2="0,43.4352940613424"
-                    Point3="4,43.4352940613424" />
-                  <mssgle:LineSegment
-                    End="7.45714293773,43.4352940613424" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7.45714293773,43.4352940613424"
-                    Point2="11.45714293773,43.4352940613424"
-                    Point3="11.45714293773,47.4352940613424" />
-                  <mssgle:LineSegment
-                    End="11.45714293773,79.3705881226847" />
+                    End="0,87.1268906368938" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="416.326531498495,570.756302291193" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Data Flow Task\Derived Column 1"
+          TopLeft="429.591837649182,438.319327482126" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="490.991837617251,373.045377860735">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.000000031931,65.2739496213908"
+              Start="0,0"
+              End="15.000000031931,57.7739496213908">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.6369748106954" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.6369748106954"
+                    Point2="0,32.6369748106954"
+                    Point3="4,32.6369748106954" />
+                  <mssgle:LineSegment
+                    End="11.000000031931,32.6369748106954" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.000000031931,32.6369748106954"
+                    Point2="15.000000031931,32.6369748106954"
+                    Point3="15.000000031931,36.6369748106954" />
+                  <mssgle:LineSegment
+                    End="15.000000031931,57.7739496213908" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.499999984034503,37.6369748106954,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="336.200000542828,503.223529032378">
+          TopLeft="503.759184573839,479.919327482126">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="164.74421813172,82.9613444594868"
+              EndConnector="0,90.8369748090673"
               Start="0,0"
-              End="164.74421813172,75.4613444594868">
+              End="0,83.3369748090673">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.0447948128143" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.0447948128143"
-                    Point2="0,49.0447948128143"
-                    Point3="4,49.0447948128143" />
-                  <mssgle:LineSegment
-                    End="160.74421813172,49.0447948128143" />
-                  <mssgle:CubicBezierSegment
-                    Point1="160.74421813172,49.0447948128143"
-                    Point2="164.74421813172,49.0447948128143"
-                    Point3="164.74421813172,53.0447948128143" />
-                  <mssgle:LineSegment
-                    End="164.74421813172,75.4613444594868" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="686.40000129853,501.078991193887">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-152.389115957316,85.1058822979781"
-              Start="0,0"
-              End="-152.389115957316,77.6058822979781">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.3125951232164" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.3125951232164"
-                    Point2="0,50.3125951232164"
-                    Point3="-4,50.3125951232164" />
-                  <mssgle:LineSegment
-                    End="-148.389115957316,50.3125951232164" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-148.389115957316,50.3125951232164"
-                    Point2="-152.389115957316,50.3125951232164"
-                    Point3="-152.389115957316,54.3125951232164" />
-                  <mssgle:LineSegment
-                    End="-152.389115957316,77.6058822979781" />
+                    End="0,83.3369748090673" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-84.1945579786579,55.3125951232164,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Conditional Split Default Output]"
-          TopLeft="496.600000840851,407.129411444305">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="189.800000457679,52.3495797495818"
-              Start="0,0"
-              End="189.800000457679,44.8495797495818">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.2619831598302" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.2619831598302"
-                    Point2="0,21.2619831598302"
-                    Point3="4,21.2619831598302" />
-                  <mssgle:LineSegment
-                    End="185.800000457679,21.2619831598302" />
-                  <mssgle:CubicBezierSegment
-                    Point1="185.800000457679,21.2619831598302"
-                    Point2="189.800000457679,21.2619831598302"
-                    Point3="189.800000457679,25.2619831598302" />
-                  <mssgle:LineSegment
-                    End="189.800000457679,44.8495797495818" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="15.6249611663395,26.2619831598302,158.550078125,16"
+              BoundingBox="-8,33.6684874045336,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

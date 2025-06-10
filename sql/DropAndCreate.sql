@@ -25,12 +25,10 @@ CREATE TABLE [dbo].[ResultsSourceTemp] (
 
 CREATE TABLE AthleteSt(
 	idT int PRIMARY KEY,
-	height decimal(16,2) NULL,
-	[weight] decimal(16,2) NULL,
+	height int NULL,
+	[weight] int NULL,
 	yearborn int NULL,
-	country nvarchar(255) NULL,
-	gender nvarchar(255) NULL,
-	NOC nvarchar(255) NULL
+	idnew int NULL
 )
 
 
@@ -100,14 +98,9 @@ DROP TABLE IF EXISTS [dbo].[Placement];
 --generate tables
 CREATE TABLE [dbo].[Athlete](
 	[id] [int] NOT NULL,
-	[name] [nvarchar](255) NOT NULL,
-	[height] [decimal](16, 2) NOT NULL,
-	[weight] [decimal](16, 2) NOT NULL,
-	[dateborn] [date] NULL,
-	[datedied] [date] NULL,
-	[country] [nvarchar](255) NOT NULL,
-	[gender] [nvarchar](255) NULL,
-	[NOC] [nvarchar](255) NOT NULL,
+	[height] [int] NOT NULL,
+	[weight] [int] NOT NULL,
+	[yearborn] [int] NULL,
 );
 
 
@@ -142,7 +135,7 @@ CREATE TABLE [dbo].[Placement](
 );
 
 CREATE TABLE [dbo].[Result](
-   [id] [int] NOT NULL IDENTITY (1,1) ,
+   [id] [int] NOT NULL,
    CountryYear_Athlete int  NOT NULL,
    Athlete_id int  NOT NULL,
    CountryYear_Olympics int  NOT NULL,
