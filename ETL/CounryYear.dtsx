@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="CounryYear"
   DTS:PackageType="5"
-  DTS:VersionBuild="68"
-  DTS:VersionGUID="{1DA12868-8FD1-4533-89EE-2656CDDB0486}">
+  DTS:VersionBuild="75"
+  DTS:VersionGUID="{ECC863B1-7EDD-40A6-809C-E36A60E54C28}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -555,7 +555,7 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[inflation]"
-                      dataType="r8"
+                      dataType="r4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[inflation]"
@@ -566,18 +566,18 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ]} == ".." ? NULL(DT_R8) : (DT_R8)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ]}</property>
+                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ]} == ".." ? NULL(DT_R4) : ((DT_R4)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ]} + 0.001)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ] == ".." ? NULL(DT_R8) : (DT_R8)[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ]</property>
+                          name="FriendlyExpression">[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ] == ".." ? NULL(DT_R4) : ((DT_R4)[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ] + 0.001)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[gdp_per_capita]"
-                      dataType="r8"
+                      dataType="r4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[gdp_per_capita]"
@@ -588,18 +588,18 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[GDP per capita (current US$)  NY GDP PCAP CD ]} == ".." ? NULL(DT_R8) : (DT_R8)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[GDP per capita (current US$)  NY GDP PCAP CD ]}</property>
+                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[GDP per capita (current US$)  NY GDP PCAP CD ]} == ".." ? NULL(DT_R4) : ((DT_R4)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[GDP per capita (current US$)  NY GDP PCAP CD ]} + 0.001)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">[GDP per capita (current US$)  NY GDP PCAP CD ] == ".." ? NULL(DT_R8) : (DT_R8)[GDP per capita (current US$)  NY GDP PCAP CD ]</property>
+                          name="FriendlyExpression">[GDP per capita (current US$)  NY GDP PCAP CD ] == ".." ? NULL(DT_R4) : ((DT_R4)[GDP per capita (current US$)  NY GDP PCAP CD ] + 0.001)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[gdp_on_health_care]"
-                      dataType="r8"
+                      dataType="r4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[gdp_on_health_care]"
@@ -610,13 +610,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ]} == ".." ? NULL(DT_R8) : (DT_R8)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ]}</property>
+                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ]} == ".." ? NULL(DT_R4) : ((DT_R4)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ]} + 0.001)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ] == ".." ? NULL(DT_R8) : (DT_R8)[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ]</property>
+                          name="FriendlyExpression">[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ] == ".." ? NULL(DT_R4) : ((DT_R4)[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ] + 0.001)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -643,7 +643,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[avg_tariff]"
-                      dataType="r8"
+                      dataType="r4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[avg_tariff]"
@@ -654,18 +654,18 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ]} == ".." ? NULL(DT_R8) : (DT_R8)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ]}</property>
+                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ]} == ".." ? NULL(DT_R4) : ((DT_R4)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ]} + 0.001)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ] == ".." ? NULL(DT_R8) : (DT_R8)[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ]</property>
+                          name="FriendlyExpression">[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ] == ".." ? NULL(DT_R4) : ((DT_R4)[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ] + 0.001)</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[stability]"
-                      dataType="r8"
+                      dataType="r4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[stability]"
@@ -676,13 +676,13 @@
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ]} == ".." ? NULL(DT_R8) : (DT_R8)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ]}</property>
+                          name="Expression">#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ]} == ".." ? NULL(DT_R4) : ((DT_R4)#{Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ]} + 0.001)</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ] == ".." ? NULL(DT_R8) : (DT_R8)[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ]</property>
+                          name="FriendlyExpression">[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ] == ".." ? NULL(DT_R4) : ((DT_R4)[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ] + 0.001)</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -712,175 +712,6 @@
                   <externalMetadataColumns />
                 </output>
               </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Flat File Destination"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="2057"
-              name="Flat File Destination"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[A]"
-                  connectionManagerRefId="Package.ConnectionManagers[A]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Country Name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Country Name"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Country Name]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Country Name]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Country Code]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Country Code"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Country Code]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Country Code]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Inflation, consumer prices (annual %)  FP CPI TOTL ZG "
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[GDP per capita (current US$)  NY GDP PCAP CD ]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="GDP per capita (current US$)  NY GDP PCAP CD "
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GDP per capita (current US$)  NY GDP PCAP CD ]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[GDP per capita (current US$)  NY GDP PCAP CD ]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Current health expenditure (% of GDP)  SH XPD CHEX GD ZS "
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Population, total  SP POP TOTL ]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Population, total  SP POP TOTL "
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Population, total  SP POP TOTL ]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Population, total  SP POP TOTL ]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS "
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER "
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[Time]"
-                      cachedDataType="i4"
-                      cachedName="Time"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Time]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Time]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
-                      cachedDataType="i4"
-                      cachedName="ErrorCode"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
-                      cachedDataType="i4"
-                      cachedName="ErrorColumn"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Country Name]"
-                      dataType="wstr"
-                      length="255"
-                      name="Country Name" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Country Code]"
-                      dataType="wstr"
-                      length="255"
-                      name="Country Code" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Inflation, consumer prices (annual %)  FP CPI TOTL ZG ]"
-                      dataType="wstr"
-                      length="255"
-                      name="Inflation, consumer prices (annual %)  FP CPI TOTL ZG " />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GDP per capita (current US$)  NY GDP PCAP CD ]"
-                      dataType="wstr"
-                      length="255"
-                      name="GDP per capita (current US$)  NY GDP PCAP CD " />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Current health expenditure (% of GDP)  SH XPD CHEX GD ZS ]"
-                      dataType="wstr"
-                      length="255"
-                      name="Current health expenditure (% of GDP)  SH XPD CHEX GD ZS " />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Population, total  SP POP TOTL ]"
-                      dataType="wstr"
-                      length="255"
-                      name="Population, total  SP POP TOTL " />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS ]"
-                      dataType="wstr"
-                      length="255"
-                      name="Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS " />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER ]"
-                      dataType="wstr"
-                      length="255"
-                      name="Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER " />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Time]"
-                      dataType="i4"
-                      name="Time" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                      dataType="i4"
-                      name="ErrorCode" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                      dataType="i4"
-                      name="ErrorColumn" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
             </component>
             <component
               refId="Package\Data Flow Task\Flat File Source"
@@ -1252,19 +1083,19 @@
                 <input
                   refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
-                  errorRowDisposition="RedirectRow"
+                  errorRowDisposition="IgnoreFailure"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[inflation]"
-                      cachedDataType="r8"
+                      cachedDataType="r4"
                       cachedName="inflation"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[inflation]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[inflation]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[gdp_per_capita]"
-                      cachedDataType="r8"
+                      cachedDataType="r4"
                       cachedName="gdp_per_capita"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gdp_per_capita]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[gdp_per_capita]" />
@@ -1276,13 +1107,13 @@
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[total_population]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[avg_tariff]"
-                      cachedDataType="r8"
+                      cachedDataType="r4"
                       cachedName="avg_tariff"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[avg_tariff]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[avg_tariff]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[stability]"
-                      cachedDataType="r8"
+                      cachedDataType="r4"
                       cachedName="stability"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[stability]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[stability]" />
@@ -1308,7 +1139,7 @@
                       lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Country Name]" />
                     <inputColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[gdp_on_health_care]"
-                      cachedDataType="r8"
+                      cachedDataType="r4"
                       cachedName="gdp_on_health_care"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gdp_healthcare_percentage]"
                       lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[gdp_on_health_care]" />
@@ -1397,11 +1228,6 @@
               endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
               name="Flat File Source Output"
               startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[OLE DB Destination Error Output]"
-              endId="Package\Data Flow Task\Flat File Destination.Inputs[Flat File Destination Input]"
-              name="OLE DB Destination Error Output"
-              startId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1483,15 +1309,11 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Data Flow Task\Flat File Source"
           TopLeft="162.642857477373,23.8612367970512" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\Data Flow Task\Flat File Destination"
-          TopLeft="129.28571456093,241.376470432057" />
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\Data Flow Task\Derived Column"
@@ -1499,31 +1321,7 @@
         <NodeLayout
           Size="170.4,41.6"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="444.285715231482,248.635293992972" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Destination Error Output]"
-          TopLeft="444.285715231482,265.805882212514">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-143.800000670552,0"
-              Start="0,0"
-              End="-136.300000670552,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-136.300000670552,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-141.358906585276,5,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="303.469388401109,301.072268736925" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
           TopLeft="237.842857477373,65.4612367970512">
@@ -1564,26 +1362,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="249.514286226703,72.317647019276"
+              EndConnector="108.69795939633,124.754621763229"
               Start="0,0"
-              End="249.514286226703,64.817647019276">
+              End="108.69795939633,117.254621763229">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.158823509638" />
+                    End="0,58.3773108816144" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,32.158823509638"
-                    Point2="0,36.158823509638"
-                    Point3="4,36.158823509638" />
+                    Point1="0,58.3773108816144"
+                    Point2="0,62.3773108816144"
+                    Point3="4,62.3773108816144" />
                   <mssgle:LineSegment
-                    End="245.514286226703,36.158823509638" />
+                    End="104.69795939633,62.3773108816144" />
                   <mssgle:CubicBezierSegment
-                    Point1="245.514286226703,36.158823509638"
-                    Point2="249.514286226703,36.158823509638"
-                    Point3="249.514286226703,40.158823509638" />
+                    Point1="104.69795939633,62.3773108816144"
+                    Point2="108.69795939633,62.3773108816144"
+                    Point3="108.69795939633,66.3773108816144" />
                   <mssgle:LineSegment
-                    End="249.514286226703,64.817647019276" />
+                    End="108.69795939633,117.254621763229" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

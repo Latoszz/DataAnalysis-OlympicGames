@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x0022_"
       DTS:CodePage="65001"
-      DTS:ConnectionString="D:\projects\sem8\idh\DataAnalysis-OlympicGames\Data\clean-data\results.csv">
+      DTS:ConnectionString="C:\Users\macie\Documents\IDH\DataAnalysis-OlympicGames\Data\clean-data\results.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -20,7 +20,7 @@
           DTS:DataType="18"
           DTS:TextQualified="True"
           DTS:ObjectName="year"
-          DTS:DTSID="{A846313F-4E67-4DC3-B9F6-7A8C28D9E7A3}"
+          DTS:DTSID="{44B29F38-246E-4E4E-A5B0-A58DCC52F7B8}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -29,7 +29,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="type"
-          DTS:DTSID="{80B7DEE7-C40F-43B7-9F16-BA429CABBC09}"
+          DTS:DTSID="{7EDB1CB8-06F3-401C-AE7F-91D20F3B7F03}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="discipline"
-          DTS:DTSID="{A37C597A-3277-478A-9C6C-86FB3EB26867}"
+          DTS:DTSID="{49A028E1-1ED4-4A39-AC1B-E726B95228CD}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="event"
-          DTS:DTSID="{174CA824-3824-4588-B8CC-5AF3E85EB577}"
+          DTS:DTSID="{9F8190A8-3534-4921-80D1-363C861864C6}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -56,7 +56,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="as"
-          DTS:DTSID="{DD12F5EF-31E7-45B3-B20A-D774DB10A402}"
+          DTS:DTSID="{16A4B54B-BEE7-428D-9942-CEADC7AAC2ED}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -64,7 +64,7 @@
           DTS:DataType="20"
           DTS:TextQualified="True"
           DTS:ObjectName="athlete_id"
-          DTS:DTSID="{DEA885A6-D4AF-4E2C-BFA7-775A5F6E241C}"
+          DTS:DTSID="{E0F9C8CC-EDE8-49C2-B983-2CE6373FCCCF}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -73,7 +73,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="NOC"
-          DTS:DTSID="{64DAC8E5-F0A5-42AF-81A6-39D8FB6A2116}"
+          DTS:DTSID="{47B4D254-D278-4501-BC59-A25DA9CBF045}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -82,7 +82,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="team"
-          DTS:DTSID="{8ACAFA77-DBDB-498D-878E-B64F1B493ACA}"
+          DTS:DTSID="{1F2B02AD-4688-431A-8C0F-2FCC60FB5625}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -90,7 +90,7 @@
           DTS:DataType="5"
           DTS:TextQualified="True"
           DTS:ObjectName="place"
-          DTS:DTSID="{BC84E42F-7256-40EF-9021-F566F9165CD2}"
+          DTS:DTSID="{042C4F9D-F924-4C05-9ECF-4D2FC67ECF6E}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -99,7 +99,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="tied"
-          DTS:DTSID="{8BE8B7C7-B541-4125-9AA6-8EF5C6DCE70E}"
+          DTS:DTSID="{0C6D5850-DD96-4A64-BD8B-825D390A4097}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -108,7 +108,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="medal"
-          DTS:DTSID="{FB3678ED-9FF3-4845-A9F4-B84FFDD7AC3D}"
+          DTS:DTSID="{BA28486E-9DF5-492A-950C-6E2035BFB04A}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

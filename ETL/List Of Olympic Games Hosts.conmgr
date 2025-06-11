@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
       DTS:CodePage="1252"
-      DTS:ConnectionString="D:\projects\sem8\idh\DataAnalysis-OlympicGames\Data\country-stats\list_of_olympic_games.csv">
+      DTS:ConnectionString="C:\Users\macie\Documents\IDH\DataAnalysis-OlympicGames\Data\country-stats\list_of_olympic_games.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -20,7 +20,7 @@
           DTS:DataType="3"
           DTS:TextQualified="True"
           DTS:ObjectName="Year"
-          DTS:DTSID="{5E23585E-5523-4337-A2D6-9F38F97902FF}"
+          DTS:DTSID="{0D2B441C-D9DE-4F81-94C8-6C9E325A8C4E}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -29,7 +29,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Location"
-          DTS:DTSID="{4CD3D196-F9FE-4DCE-86F4-1CB996D38798}"
+          DTS:DTSID="{6EB1A2CB-1934-4462-AD9B-FC45A99B1B87}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

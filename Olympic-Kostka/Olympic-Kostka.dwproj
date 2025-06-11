@@ -66,7 +66,7 @@
           <ConfigurationSetting>
             <Id>SSISDB</Id>
             <Name>SSISDB</Name>
-            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-5KJMF10\SQLEXPRESS;Integrated Security=SSPI;Initial Catalog=SSISDB</Value>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=G14\MSSQLDEV;Integrated Security=SSPI;Initial Catalog=Olympics</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

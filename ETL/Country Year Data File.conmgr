@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x0022_"
       DTS:CodePage="65001"
-      DTS:ConnectionString="D:\projects\sem8\idh\DataAnalysis-OlympicGames\Data\country-stats\country_stats.csv">
+      DTS:ConnectionString="C:\Users\macie\Documents\IDH\DataAnalysis-OlympicGames\Data\country-stats\country_stats.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -21,7 +21,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="Country Name"
-          DTS:DTSID="{9D48F17A-7BD8-4428-AB48-A373E0C17A24}"
+          DTS:DTSID="{358F06B6-609F-4877-A369-198E27937E2A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="Country Code"
-          DTS:DTSID="{E78DD7BB-789E-49F6-9A03-9C9842982051}"
+          DTS:DTSID="{B24D1988-BB08-4256-B232-68604C6E6650}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
           DTS:DataType="3"
           DTS:TextQualified="True"
           DTS:ObjectName="Time"
-          DTS:DTSID="{DC8040CA-63D4-461A-8590-14CC310D0A6E}"
+          DTS:DTSID="{C33800C0-B38E-40A9-8549-0382C41565B2}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="Time Code"
-          DTS:DTSID="{6AAEADB3-ECEE-491F-8506-6D08BDA3B0CC}"
+          DTS:DTSID="{AA6DDFA8-C6BB-464E-B1BF-A9CC35B0EAD8}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -56,7 +56,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="Inflation, consumer prices (annual %)  FP CPI TOTL ZG "
-          DTS:DTSID="{08DEA26D-7F8A-4FB8-8A78-D8F50DA7BB78}"
+          DTS:DTSID="{A6D0E262-7F49-434E-84F8-E363F1C6C4B3}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -65,7 +65,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="GDP per capita (current US$)  NY GDP PCAP CD "
-          DTS:DTSID="{257F4B75-ED67-43B8-9B62-D0537F9106D5}"
+          DTS:DTSID="{E349A17A-6B93-4AA4-A53E-014B3D02EB45}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -74,7 +74,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="Current health expenditure (% of GDP)  SH XPD CHEX GD ZS "
-          DTS:DTSID="{D7335507-BBAA-4C08-8ED5-23306AB5061F}"
+          DTS:DTSID="{F4D0741B-C945-4984-87C9-52C7008350B0}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -83,7 +83,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="Population, total  SP POP TOTL "
-          DTS:DTSID="{E94C16AC-CA74-4EB4-BECE-3238FBAB3DDD}"
+          DTS:DTSID="{E842FC7E-0B66-4B51-8044-519225620D8A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -92,7 +92,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS "
-          DTS:DTSID="{71C25831-1EB8-4DDE-AC59-10C5330F3825}"
+          DTS:DTSID="{F7284FB4-7311-47E9-8E4A-8C827CF6141F}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -101,7 +101,7 @@
           DTS:DataType="130"
           DTS:TextQualified="True"
           DTS:ObjectName="Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER "
-          DTS:DTSID="{522158EF-DD4F-43D9-991F-E690A98D74E9}"
+          DTS:DTSID="{DB0EF55E-BD55-4BC5-96C4-D9C00169D1EB}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

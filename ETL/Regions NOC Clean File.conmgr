@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x0022_"
       DTS:CodePage="65001"
-      DTS:ConnectionString="D:\projects\sem8\idh\DataAnalysis-OlympicGames\Data\clean-data\noc_regions.csv">
+      DTS:ConnectionString="C:\Users\macie\Documents\IDH\DataAnalysis-OlympicGames\Data\clean-data\noc_regions.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -21,7 +21,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="NOC"
-          DTS:DTSID="{A6E98B03-21F5-44EE-BDCA-24908CDF5944}"
+          DTS:DTSID="{A5D05F17-2A15-4E2B-A904-B749A91A36FF}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="region"
-          DTS:DTSID="{D8C0E390-E5D7-4E7E-8AC8-0322D04B6990}"
+          DTS:DTSID="{5844F28C-1B34-41C5-9CC7-DA8B9B6FE74C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="notes"
-          DTS:DTSID="{543A4574-8658-4C3A-BB74-ADC48A65088A}"
+          DTS:DTSID="{5134DD7C-4EFC-4716-AD3D-4CFBB1793539}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>
