@@ -1,0 +1,586 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="96dfacdf-8df1-46c0-9e1f-5da8436f8358" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>SSISDB</ID>
+  <Name>SSISDB</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="26" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9989" scrolltop="-1538" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="45" x="16468" y="9567" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee00009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Athlete" left="11948" top="5247" logicalid="13" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Athlete" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Medal" left="9618" top="10494" logicalid="14" controlid="2" masterid="0" hint1="0" hint2="0" width="3000" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000034060000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Medal" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="CountryYear" left="3394" top="10352" logicalid="15" controlid="3" masterid="0" hint1="0" hint2="0" width="4868" height="4466" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00000413000072110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_CountryYear" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Placement" left="20" top="5606" logicalid="16" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="1588" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000034060000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Placement" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Result" left="5420" top="4707" logicalid="17" controlid="5" masterid="0" hint1="0" hint2="0" width="4128" height="3387" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000201000003b0d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Result" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Event" left="5984" top="0" logicalid="18" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Event" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9248" top="6001" logicalid="19" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Result_Athlete]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="5" sourceattachpoint="12" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11948" y="6400" />
+              <point x="9548" y="6400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8834" top="7794" logicalid="20" controlid="8" masterid="0" hint1="0" hint2="0" width="2684" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Result_Medal]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="5" sourceattachpoint="4" destattachpoint="13" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11118" y="10494" />
+              <point x="11118" y="9294" />
+              <point x="9134" y="9294" />
+              <point x="9134" y="8094" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5979" top="7794" logicalid="21" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3058" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Result_CountryYear_Athlete]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="5" sourceattachpoint="10" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6378" y="10352" />
+              <point x="6378" y="9223" />
+              <point x="6384" y="9223" />
+              <point x="6384" y="8094" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5429" top="7794" logicalid="22" controlid="10" masterid="0" hint1="0" hint2="0" width="799" height="3058" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Result_CountryYear_Olympics]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="5" sourceattachpoint="8" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5828" y="10352" />
+              <point x="5828" y="9223" />
+              <point x="5834" y="9223" />
+              <point x="5834" y="8094" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2720" top="6001" logicalid="23" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Result_Placement]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="5" sourceattachpoint="13" destattachpoint="18" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3020" y="6400" />
+              <point x="5420" y="6400" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="7085" top="1808" logicalid="24" controlid="12" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Result_Event]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="5" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7484" y="2307" />
+              <point x="7484" y="4707" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-9989</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-1538</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>45</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="38c85b1d-03cd-4450-b418-8f4b00264dd5">
+      <ID>Country Year Athlete</ID>
+      <Name>Country Year Athlete</Name>
+      <DimensionID>Country Year</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="eeb75c25-6ad7-4649-9df3-b9ca09c51f4d">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="91905628-34c1-4780-8e51-ad99732ba991">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="875b7a1b-c0f6-49cb-a6df-d92ce631e43c">
+          <AttributeID>NOC</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="66b6fb18-2e5b-4f7c-9886-0baf4c3ba760">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d02d32f1-66bd-43f6-9800-0d22d8d83b1b">
+          <AttributeID>Inflation</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="69f1b786-0b3f-4185-b75c-752194d2d8b4">
+          <AttributeID>Gdp Per Capita</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3c304e8b-13f5-48d8-b5ed-0817fd95c1da">
+          <AttributeID>Gdp Healthcare Percentage</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="86ca5202-63da-4b3f-9212-8e95a9a5896e">
+          <AttributeID>Total Population</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="386de0e1-3b5e-4909-85ff-b7969551ab24">
+          <AttributeID>Avg Tariff</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5c5bbc99-fe7a-45b6-bf3d-fe7eb59d6091">
+          <AttributeID>Stability</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b1cb0a53-f621-4ca1-ad31-66e5a141b142">
+      <ID>Placement</ID>
+      <Name>Placement</Name>
+      <DimensionID>Placement</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a205cdf5-b166-420b-8889-0c2e638a5224">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4d80cadc-7c47-40f9-8c4a-bf60f03bd08d">
+      <ID>Medal</ID>
+      <Name>Medal</Name>
+      <DimensionID>Medal</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a9e964d9-3331-46c0-a36b-3a14dec3451f">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bf0bdd92-d5ac-48a9-b8e8-c55a4626887e">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b4d85e22-b43e-49ab-8772-2d88b2438531">
+      <ID>Event</ID>
+      <Name>Event</Name>
+      <DimensionID>Event</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7df2d4d6-9abf-4a4a-a3c1-df724326d94f">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c287ee13-b910-4204-bcbd-00a2cfbafcab">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0cfb46d7-eed0-453c-a7a3-fad895527cbb">
+          <AttributeID>Gender</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6e39db3f-8d36-41aa-baff-3ffd7254a3c6">
+          <AttributeID>Discipline</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c11995a3-e583-4aa1-a393-c41ce0bf6504">
+      <ID>Country Year Olympics</ID>
+      <Name>Country Year Olympics</Name>
+      <DimensionID>Country Year</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="219620af-eebe-414b-b99c-de871d49dc01">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="05f17059-b6a2-4742-b745-0f08dd7db2a2">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1a4c4cd7-e18c-4362-be1c-4ae17b640484">
+          <AttributeID>NOC</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb851b2a-d585-4874-969d-be81773ed469">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4e608533-9a73-4cda-a578-0b6267237728">
+          <AttributeID>Inflation</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="43707af9-0f2b-4548-a300-fb3bd1c01421">
+          <AttributeID>Gdp Per Capita</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2820d195-a0ef-4f6e-9f42-adda8efc68be">
+          <AttributeID>Gdp Healthcare Percentage</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b0d36d6a-5544-47aa-be7a-8c4d177d1232">
+          <AttributeID>Total Population</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1717a40e-13d8-4857-bef2-b42d0dfc086a">
+          <AttributeID>Avg Tariff</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d6aad848-e304-4a92-a310-3a7ef8dcf9ea">
+          <AttributeID>Stability</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3cc8c23d-5f90-4d91-8f8a-bdd502b753a0">
+      <ID>Athlete</ID>
+      <Name>Athlete</Name>
+      <DimensionID>Athlete</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="79b7fc9b-d9ac-4d21-97ee-2a04a12639a1">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="afcbe71a-87be-4ea0-9c7e-a4612f8e9295">
+          <AttributeID>Height</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="26089886-dac8-4386-8c50-398d8769544f">
+          <AttributeID>Weight</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4f4a5d83-4c63-4a45-b13e-651dd9924fac">
+          <AttributeID>Yearborn</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="469405ad-b042-47a3-af5c-15ff5dc265ee">
+      <ID>Country Year</ID>
+      <Name>Country Year</Name>
+      <DimensionID>Country Year</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="89dfefc8-b589-4857-94d2-977bbb53b11a">
+          <AttributeID>Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a6319d4f-2ad8-4000-9628-7fd4ef168ee1">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2c9ce3d8-56fc-4a8d-9a9a-65408e213738">
+          <AttributeID>NOC</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7bd3c85c-8af4-4c43-9a5b-cc8d36f79924">
+          <AttributeID>Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="24f04cc3-0568-4d29-ab56-a1f1ec618190">
+          <AttributeID>Inflation</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3228adb3-3522-4aa4-88c5-521c56955fcb">
+          <AttributeID>Gdp Per Capita</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ef91d1e1-1ce2-459b-ae3e-a23ad9a62fc4">
+          <AttributeID>Gdp Healthcare Percentage</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e3f154ca-f475-4608-a89c-254137d94830">
+          <AttributeID>Total Population</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9306cb02-c456-4515-b1e8-dab819a42830">
+          <AttributeID>Avg Tariff</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5a204286-34f5-442e-9f9c-c7e202caeaa3">
+          <AttributeID>Stability</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="2546a031-3ef7-4e40-8372-f40401edf034">
+      <ID>Result</ID>
+      <Name>Result</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="5fa92493-78d9-4ceb-b117-81000430aa52">
+          <ID>Result Count</ID>
+          <Name>Result Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="c2429dbc-5cc5-4d4b-918f-a8abcd7209a8">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="877c0363-a942-4924-96f1-b9cf4fb538a4">
+              <TableID>dbo_Result</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3cdd98fb-209d-4c2f-ade6-947b3c39e1d2">
+          <ID>Medal Id</ID>
+          <Name>Medal Sum</Name>
+          <Source dwd:design-time-name="2aa5cbef-0f0d-4e36-83fb-219218e5707e">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e5ea73fe-9511-4ef2-98a3-10d0d39ed111">
+              <TableID>dbo_Result</TableID>
+              <ColumnID>Medal_id</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bf932854-4fa5-4fcb-ae62-b2a36e5330f0">
+          <CubeDimensionID>Country Year Athlete</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c006b762-ce8f-4fea-a82b-bb7a0b998a78">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a7cc7db1-8b34-4ab9-9764-30d001bca954">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="05ba1318-0a32-465e-a0ee-816813f8aa13">
+                    <TableID>dbo_Result</TableID>
+                    <ColumnID>CountryYear_Athlete</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1184dee5-7655-4153-ab41-dc738d0c2a60">
+          <CubeDimensionID>Placement</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="739bf9b2-3358-452c-9a06-36ad5b9b56d2">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4e90d699-c2a4-4bb7-978c-f8d19143fcf9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7973c832-1a0b-4e43-8b34-840e0728e04d">
+                    <TableID>dbo_Result</TableID>
+                    <ColumnID>Placement_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5295d31d-6720-481a-8d2f-fd91a2b28e57">
+          <CubeDimensionID>Medal</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c1b31c3f-86f7-4cae-b785-81e875f57746">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6d7d2068-ddfb-4ac5-9660-57f0de269a16">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="f275a279-33cb-482f-a02d-b6897352b2e2">
+                    <TableID>dbo_Result</TableID>
+                    <ColumnID>Medal_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="b0410ec5-c6bf-4c67-91a3-e20c19bb4ca6">
+          <CubeDimensionID>Event</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="865b13c6-8181-4683-9654-8f60d92cfc7f">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4f9c8fff-9ecb-4b12-8e42-b731c0228da2">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a89c02d7-c34b-4e88-99d8-8f856ef498a6">
+                    <TableID>dbo_Result</TableID>
+                    <ColumnID>Event_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="cece0856-0e38-4237-9aa3-5de347cc07ab">
+          <CubeDimensionID>Country Year Olympics</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9dea6b73-a281-40b9-bf59-b3222a6559a7">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2a7671c4-7540-4854-b312-38536a91f51d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7d31bc0b-88e5-4660-8f1f-9b765e34e71d">
+                    <TableID>dbo_Result</TableID>
+                    <ColumnID>CountryYear_Olympics</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8cdc2a7d-8aa4-4139-b959-e5e8098f2b0c">
+          <CubeDimensionID>Athlete</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f62d64d5-a8af-4c0a-a83f-54888d410ed9">
+              <AttributeID>Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e9ddc6fe-b86c-43e8-b523-a94b15a25dbd">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e3ba0e1c-6f71-47ed-a61c-8ad94f4e60d8">
+                    <TableID>dbo_Result</TableID>
+                    <ColumnID>Athlete_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="67c7d229-71be-409b-ba98-60cebe102e1e">
+    <DataSourceViewID>SSISDB</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="43275536-d438-4439-9f10-85cdbc98e7d9">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Medal avg]
+ AS [Measures].[Medal Sum]/[Measures].[Result Count], 
+VISIBLE = 1  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

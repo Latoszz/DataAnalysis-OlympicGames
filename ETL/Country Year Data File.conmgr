@@ -1,119 +1,107 @@
 ﻿<?xml version="1.0"?>
 <DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
-  DTS:ObjectName="Bios Locs Clean File"
-  DTS:DTSID="{3ECA4088-6E64-40EE-96B8-7EC18E1A8C8F}"
+  DTS:ObjectName="Country Year Data File"
+  DTS:DTSID="{DB9372A4-7346-4C26-B188-1BA3FC85CEFA}"
   DTS:CreationName="FLATFILE">
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:Format="Delimited"
-      DTS:LocaleID="4105"
+      DTS:LocaleID="2057"
       DTS:HeaderRowDelimiter="_x000D__x000A_"
       DTS:ColumnNamesInFirstDataRow="True"
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x0022_"
       DTS:CodePage="65001"
-      DTS:ConnectionString="C:\Users\macie\Documents\IDH\DataAnalysis-OlympicGames\Data\clean-data\bios_locs.csv">
+      DTS:ConnectionString="C:\Users\macie\Documents\IDH\DataAnalysis-OlympicGames\Data\country-stats\country_stats.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:DataType="20"
-          DTS:TextQualified="True"
-          DTS:ObjectName="athlete_id"
-          DTS:DTSID="{F92E343D-2994-4967-9B0C-611059440A6C}"
-          DTS:CreationName="" />
-        <DTS:FlatFileColumn
-          DTS:ColumnType="Delimited"
-          DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="50"
+          DTS:MaximumWidth="255"
           DTS:DataType="130"
           DTS:TextQualified="True"
-          DTS:ObjectName="name"
-          DTS:DTSID="{0F97BC75-BDA4-46FC-8A16-F03D0A92CE4D}"
+          DTS:ObjectName="Country Name"
+          DTS:DTSID="{358F06B6-609F-4877-A369-198E27937E2A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:DataType="7"
-          DTS:TextQualified="True"
-          DTS:ObjectName="born_date"
-          DTS:DTSID="{AE5FEE89-14CB-43F3-8D5A-B2D252FED179}"
-          DTS:CreationName="" />
-        <DTS:FlatFileColumn
-          DTS:ColumnType="Delimited"
-          DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="200"
+          DTS:MaximumWidth="255"
           DTS:DataType="130"
           DTS:TextQualified="True"
-          DTS:ObjectName="born_city"
-          DTS:DTSID="{0A86F07E-5F50-4B43-B4FA-28570D480D1B}"
+          DTS:ObjectName="Country Code"
+          DTS:DTSID="{B24D1988-BB08-4256-B232-68604C6E6650}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="200"
+          DTS:DataType="3"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Time"
+          DTS:DTSID="{C33800C0-B38E-40A9-8549-0382C41565B2}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="255"
           DTS:DataType="130"
           DTS:TextQualified="True"
-          DTS:ObjectName="born_region"
-          DTS:DTSID="{C739BDF5-9EEC-4E2B-B19C-D5DCFE312750}"
+          DTS:ObjectName="Time Code"
+          DTS:DTSID="{AA6DDFA8-C6BB-464E-B1BF-A9CC35B0EAD8}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="200"
+          DTS:MaximumWidth="255"
           DTS:DataType="130"
           DTS:TextQualified="True"
-          DTS:ObjectName="born_country"
-          DTS:DTSID="{6A38EF33-F525-49CF-A4EB-A7D0D549A002}"
+          DTS:ObjectName="Inflation, consumer prices (annual %)  FP CPI TOTL ZG "
+          DTS:DTSID="{A6D0E262-7F49-434E-84F8-E363F1C6C4B3}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:MaximumWidth="200"
+          DTS:MaximumWidth="255"
           DTS:DataType="130"
           DTS:TextQualified="True"
-          DTS:ObjectName="NOC"
-          DTS:DTSID="{FB991DC3-CCC5-4520-BE27-CA77F656DCFE}"
+          DTS:ObjectName="GDP per capita (current US$)  NY GDP PCAP CD "
+          DTS:DTSID="{E349A17A-6B93-4AA4-A53E-014B3D02EB45}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:DataType="5"
+          DTS:MaximumWidth="255"
+          DTS:DataType="130"
           DTS:TextQualified="True"
-          DTS:ObjectName="height_cm"
-          DTS:DTSID="{023C50A1-0343-413B-9EBD-41CC52D4C90E}"
+          DTS:ObjectName="Current health expenditure (% of GDP)  SH XPD CHEX GD ZS "
+          DTS:DTSID="{F4D0741B-C945-4984-87C9-52C7008350B0}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:DataType="5"
+          DTS:MaximumWidth="255"
+          DTS:DataType="130"
           DTS:TextQualified="True"
-          DTS:ObjectName="weight_kg"
-          DTS:DTSID="{9FEA3406-3D3C-4E69-8B35-08C012334A66}"
+          DTS:ObjectName="Population, total  SP POP TOTL "
+          DTS:DTSID="{E842FC7E-0B66-4B51-8044-519225620D8A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
           DTS:ColumnDelimiter="_x002C_"
-          DTS:DataType="7"
+          DTS:MaximumWidth="255"
+          DTS:DataType="130"
           DTS:TextQualified="True"
-          DTS:ObjectName="died_date"
-          DTS:DTSID="{284BA1AF-673A-4A78-B9B2-EC43709D4A98}"
+          DTS:ObjectName="Tariff rate, applied, simple mean, primary products (%)  TM TAX TCOM SM AR ZS "
+          DTS:DTSID="{F7284FB4-7311-47E9-8E4A-8C827CF6141F}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
-          DTS:ColumnDelimiter="_x002C_"
-          DTS:DataType="5"
+          DTS:ColumnDelimiter="_x000D__x000A_"
+          DTS:MaximumWidth="255"
+          DTS:DataType="130"
           DTS:TextQualified="True"
-          DTS:ObjectName="lat"
-          DTS:DTSID="{921A9C6E-4F63-4346-AF18-D86FAC96C33E}"
-          DTS:CreationName="" />
-        <DTS:FlatFileColumn
-          DTS:ColumnType="Delimited"
-          DTS:ColumnDelimiter="_x000A_"
-          DTS:DataType="5"
-          DTS:TextQualified="True"
-          DTS:ObjectName="long"
-          DTS:DTSID="{48203C81-9EEC-409D-A8AC-043B93D11AE7}"
+          DTS:ObjectName="Political Stability and Absence of Violence Terrorism  Percentile Rank, Lower Bound of 90% Confidence Interval  PV PER RNK LOWER "
+          DTS:DTSID="{DB0EF55E-BD55-4BC5-96C4-D9C00169D1EB}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

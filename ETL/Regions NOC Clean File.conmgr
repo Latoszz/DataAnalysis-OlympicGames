@@ -21,7 +21,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="NOC"
-          DTS:DTSID="{14F74E82-AFBB-4A9E-B8D0-40BB094539EB}"
+          DTS:DTSID="{A5D05F17-2A15-4E2B-A904-B749A91A36FF}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="region"
-          DTS:DTSID="{0D320EE0-0902-439B-8E57-9D0DBCF45DEF}"
+          DTS:DTSID="{5844F28C-1B34-41C5-9CC7-DA8B9B6FE74C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="notes"
-          DTS:DTSID="{583F4350-F3E4-4D3F-B3E3-66F741D7E2DA}"
+          DTS:DTSID="{5134DD7C-4EFC-4716-AD3D-4CFBB1793539}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

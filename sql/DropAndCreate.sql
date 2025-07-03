@@ -1,42 +1,60 @@
 --Staging Tables
-
 DROP TABLE IF EXISTS [dbo].[ResultSt];
 DROP TABLE IF EXISTS [dbo].[AthleteSt]; 
 DROP TABLE IF EXISTS [dbo].[CountryYearSt];
 DROP TABLE IF EXISTS [dbo].[EventSt];
 DROP TABLE IF EXISTS [dbo].[MedalSt];
 DROP TABLE IF EXISTS [dbo].[PlacementSt];
-DROP TABLE IF EXISTS [dbo].[ResultsSourceTmp]
+DROP TABLE IF EXISTS [dbo].[RawResultClean]
+DROP TABLE IF EXISTS [dbo].[ResultsSourceTemp]
+
+CREATE TABLE [dbo].[ResultsSourceTemp] (
+    [year] INT NULL,
+    [type] NVARCHAR(255) NULL,
+    discipline NVARCHAR(255) NULL,
+    [event] NVARCHAR(255) NULL,
+    athlete_name NVARCHAR(255) NULL,
+    athlete_id INT NULL,
+    NOC NVARCHAR(255) NULL,
+    team NVARCHAR(255) NULL,
+    place INT NULL,
+    tied BIT NULL,
+    medal NVARCHAR(255) NULL
+);
+
 
 CREATE TABLE AthleteSt(
 	idT int PRIMARY KEY,
-	height decimal(16,2) NULL,
-	[weight] decimal(16,2) NULL,
+	height int NULL,
+	[weight] int NULL,
 	yearborn int NULL,
-	country nvarchar(max) NULL,
-	gender nvarchar(max) NULL,
-	NOC nvarchar(max) NULL
+	idnew int NULL
 )
 
 
 CREATE TABLE [dbo].[CountryYearSt](
-	[idT] [int] NOT NULL  IDENTITY (1,1) ,
+	[idT] [int] NOT NULL IDENTITY (1,1) ,
 	[year] [int] NULL,
-	[NOC] [nvarchar](max) NULL,
-	[name] [nvarchar](max) NULL,
-	[region] [nvarchar](max) NULL,
+	[NOC] [nvarchar](255) NULL,
+	[name] [nvarchar](255) NULL,
+	[inflation] float NULL,
+	gdp_per_capita float NULL,
+	gdp_healthcare_percentage float NULL,
+	total_population bigint NULL,
+	avg_tariff float NULL,
+	stability float NULL
 );
 
 CREATE TABLE [dbo].[EventSt](
 	[idT] [int] NOT NULL IDENTITY (1,1),
-	[name] [nvarchar](max) NULL,
-	[gender] [nvarchar](max) NULL,
-	[discipline] [nvarchar](max) NULL,
+	[name] [nvarchar](255) NULL,
+	[gender] [nvarchar](255) NULL,
+	[discipline] [nvarchar](255) NULL,
 );
 
 CREATE TABLE [dbo].[MedalSt](
 	[idT] [int] NOT NULL,
-	[name] [nvarchar](max) NULL,
+	[name] [nvarchar](255) NULL,
 );
 
 CREATE TABLE [dbo].[PlacementSt](
@@ -45,6 +63,7 @@ CREATE TABLE [dbo].[PlacementSt](
 );
 
 CREATE TABLE [dbo].[ResultSt](
+   [id] [int] NOT NULL IDENTITY (1,1) ,
    CountryYear_AthleteT int  NOT NULL,
    Athlete_idT int NOT NULL,
    CountryYear_OlympicsT int NOT NULL,
@@ -55,25 +74,9 @@ CREATE TABLE [dbo].[ResultSt](
 
 CREATE TABLE [dbo].[RawResultClean](
 	[year] int NULL,
-	[type] nvarchar(max) NULL,
-	[discipline] nvarchar(max)
+	[type] nvarchar(255) NULL,
+	[discipline] nvarchar(255)
 )
-
-CREATE TABLE [dbo].[ResultsSourceTmp](
-	[year] [int] NULL,
-	[type] [nvarchar](max) NULL,
-	[discipline] [nvarchar](max) NULL,
-	[event] [nvarchar](max) NULL,
-	[athlete_name] [nvarchar](max) NULL,
-	[athlete_id] [int] NULL,
-	[NOC] [nvarchar](max) NULL,
-	[team] [nvarchar](max) NULL,
-	[place] [int] NULL,
-	[tied] [bit] NULL,
-	[medal] [nvarchar](max) NULL
-) 
-
-ALTER TABLE [dbo].[AthleteSt] ADD CONSTRAINT PK_AthleteSt PRIMARY KEY (idT);
 
 ALTER TABLE [dbo].[CountryYearSt] ADD CONSTRAINT PK_CountryYearSt PRIMARY KEY (idT);
 
@@ -82,8 +85,6 @@ ALTER TABLE [dbo].[EventSt] ADD CONSTRAINT PK_EventSt PRIMARY KEY (idT);
 ALTER TABLE [dbo].[MedalSt] ADD CONSTRAINT PK_MedalSt PRIMARY KEY (idT);
 
 ALTER TABLE [dbo].[PlacementSt] ADD CONSTRAINT PK_PlacementSt PRIMARY KEY (idT);
-
-ALTER TABLE [dbo].[ResultSt] ADD CONSTRAINT PK_ResultSt PRIMARY KEY (CountryYear_AthleteT, Athlete_idT,CountryYear_OlympicsT,Event_idT,Medal_idT,Placement_idT);
 
 ---Final tables
 
@@ -97,35 +98,35 @@ DROP TABLE IF EXISTS [dbo].[Placement];
 --generate tables
 CREATE TABLE [dbo].[Athlete](
 	[id] [int] NOT NULL,
-	[name] [nvarchar](255) NOT NULL,
-	[height] [decimal](16, 2) NOT NULL,
-	[weight] [decimal](16, 2) NOT NULL,
-	[dateborn] [date] NULL,
-	[datedied] [date] NULL,
-	[country] [nvarchar](255) NOT NULL,
-	[gender] [nvarchar](255) NULL,
-	[NOC] [nvarchar](255) NOT NULL,
+	[height] [int] NOT NULL,
+	[weight] [int] NOT NULL,
+	[yearborn] [int] NULL,
 );
 
 
 CREATE TABLE [dbo].[CountryYear](
 	[id] [int] NOT NULL,
-	[year] [int] NOT NULL,
-	[NOC] [nvarchar](max) NOT NULL,
-	[name] [nvarchar](max) NOT NULL,
-	[region] [nvarchar](max) NOT NULL,
+	[year] [int] NULL,
+	[NOC] [nvarchar](255) NULL,
+	[name] [nvarchar](255) NULL,
+	[inflation] float NULL,
+	gdp_per_capita float NULL,
+	gdp_healthcare_percentage float NULL,
+	total_population bigint NULL,
+	avg_tariff float NULL,
+	stability float NULL
 );
 
 CREATE TABLE [dbo].[Event](
 	[id] [int] NOT NULL,
-	[name] [nvarchar](max) NOT NULL,
-	[gender] [nvarchar](max) NOT NULL,
-	[discipline] [nvarchar](max) NOT NULL,
+	[name] [nvarchar](255) NOT NULL,
+	[gender] [nvarchar](255) NOT NULL,
+	[discipline] [nvarchar](255) NOT NULL,
 );
 
 CREATE TABLE [dbo].[Medal](
 	[id] [int] NOT NULL,
-	[name] [nvarchar](max) NOT NULL,
+	[name] [nvarchar](255) NOT NULL,
 );
 
 CREATE TABLE [dbo].[Placement](
@@ -134,6 +135,7 @@ CREATE TABLE [dbo].[Placement](
 );
 
 CREATE TABLE [dbo].[Result](
+   [id] [int] NOT NULL,
    CountryYear_Athlete int  NOT NULL,
    Athlete_id int  NOT NULL,
    CountryYear_Olympics int  NOT NULL,
@@ -151,8 +153,6 @@ ALTER TABLE [dbo].[Event] ADD CONSTRAINT PK_Event PRIMARY KEY (id);
 ALTER TABLE [dbo].[Medal] ADD CONSTRAINT PK_Medal PRIMARY KEY (id);
 
 ALTER TABLE [dbo].[Placement] ADD CONSTRAINT PK_Placement PRIMARY KEY (id);
-
-ALTER TABLE [dbo].[Result] ADD CONSTRAINT PK_Result PRIMARY KEY (CountryYear_Athlete, Athlete_id,CountryYear_Olympics,Event_id,Medal_id,Placement_id);
 
 
 --add fk

@@ -11,8 +11,8 @@
   DTS:LocaleID="4105"
   DTS:ObjectName="Medal"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{BA1F185F-1C37-45D1-8094-07B74EE41807}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{5E64EDB6-7AF6-403B-9F51-C354A477C24D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -31,7 +31,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{03769665-D7A5-422A-903D-84C5D7E7EC10}"
-          SQLTask:SqlStatementSource="INSERT INTO MedalSt (idT, name)&#xA;VALUES&#xA;(1, 'gold'),&#xA;(2, 'silver'),&#xA;(3, 'bronze'),&#xA;(4, 'no medal');" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="INSERT INTO MedalSt (idT, name)&#xA;VALUES&#xA;(3, 'gold'),&#xA;(2, 'silver'),&#xA;(1, 'bronze'),&#xA;(0, 'no medal');" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
